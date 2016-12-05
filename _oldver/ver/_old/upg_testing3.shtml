@@ -1,0 +1,195 @@
+<html>
+
+    <head>
+
+        <title>Upgrade Testing 3</title>
+
+    </head>
+
+    <script>
+
+        //VARIABLES FOR UPGRADE 1
+        var upgOne = 1;
+        var upgOneId = "one";
+        var upgOneType = 1;
+
+        //VARIABLES FOR UPGRADE 2
+        var upgTwo = 1;
+        var upgTwoId = "two"
+        var upgTwoType = 2;
+
+        //VARIABLES FOR UPGRADE 3
+        var upgThree = 1;
+        var upgThreeId = "three"
+        var upgThreeType = 3;
+
+        //UPGRADE TYPES
+        var typeAdd = "add";
+        var typeSub = "subtract";
+        var typeMult = "multiply"
+
+        //Other Vars
+        var upgDummy
+
+
+        function direct(type, upgId)
+        {
+            if(type == "add")
+            {
+                if(upgId == upgOneId)
+                {
+                    add(upgOne)
+                    upgOne = upgDummy;
+                }
+                else if(upgId == upgTwoId)
+                {
+                    add(upgTwo)
+                    upgTwo = upgDummy;
+                }
+                else if(upgId == upgThreeId)
+                {
+                    add(upgThree)
+                    upgThree = upgDummy;
+                }
+                else
+                {
+                    alert("ERROR: direct() {if(type==add)}")
+                }
+            }
+            else if(type == "subtract")
+            {
+                if(upgId == upgOneId)
+                {
+                    sub(upgOne)
+                    upgOne = upgDummy;
+                }
+                else if(upgId == upgTwoId)
+                {
+                    sub(upgTwo)
+                    upgTwo = upgDummy;
+                }
+                else if(upgId == upgThreeId)
+                {
+                    sub(upgThree)
+                    upgThree = upgDummy;
+                }
+                else
+                {
+                    alert("ERROR: direct() {if(type==add)}")
+                }
+            }
+            else if(type == "multiply")
+            {
+                if(upgId == upgOneId)
+                {
+                    mult(upgOne)
+                    upgOne = upgDummy;
+                }
+                else if(upgId == upgTwoId)
+                {
+                    mult(upgTwo)
+                    upgTwo = upgDummy;
+                }
+                else if(upgId == upgThreeId)
+                {
+                    mult(upgThree)
+                    upgThree = upgDummy;
+                }
+                else
+                {
+                    alert("ERROR: direct() {if(type==add)}")
+                }
+            }
+            else
+            {
+                alert("ERROR!!!")
+            }
+
+            loadVar()
+        }
+
+        function add(upgNum)
+        {
+            upgDummy = upgNum;
+            upgDummy++;
+        }
+
+        function sub(upgNum)
+        {
+            upgDummy = upgNum;
+            upgDummy--;
+        }
+
+        function mult(upgNum)
+        {
+            upgDummy = upgNum;
+            upgDummy = Math.round(upgDummy * 1.5);
+        }
+
+
+        function loadVar()
+        {
+            document.getElementById("upgOne").innerHTML = upgOne;
+            document.getElementById("upgTwo").innerHTML = upgTwo;
+            document.getElementById("upgThree").innerHTML = upgThree;
+        }
+
+        function reset()
+        {
+            upgOne = 1;
+            upgTwo = 1;
+            upgThree = 1;
+            loadVar()
+        }
+
+    </script>
+
+    <body onload="loadVar()">
+
+        <table>
+
+            <tr id="buttonRow">
+
+                <td align="center">
+
+                    Upgrade One<br>
+                    <button id="buttonOne" onclick="direct(typeAdd, upgOneId)">upgOne++</button><br>
+                    <button id="buttonOne" onclick="direct(typeSub, upgOneId)">upgOne--</button><br>
+                    <button id="buttonOne" onclick="direct(typeMult, upgOneId)">upgOne*1.5</button><br>
+                    <span id="upgOne"></span>
+
+                </td>
+
+                <td align="center">
+
+                    Upgrade Two<br>
+                    <button id="buttonTwo" onclick="direct(typeAdd, upgTwoId)">upgTwo++</button><br>
+                    <button id="buttonTwo" onclick="direct(typeSub, upgTwoId)">upgTwo--</button><br>
+                    <button id="buttonTwo" onclick="direct(typeMult, upgTwoId)">upgTwo*1.5</button><br>
+                    <span id="upgTwo"></span>
+
+                </td>
+
+                <td align="center">
+
+                    Upgrade Three<br>
+                    <button id="buttonThree" onclick="direct(typeAdd, upgThreeId)">upgThree++</button><br>
+                    <button id="buttonThree" onclick="direct(typeSub, upgThreeId)">upgThree--</button><br>
+                    <button id="buttonThree" onclick="direct(typeMult, upgThreeId)">upgThree*1.5</button><br>
+                    <span id="upgThree"></span>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="reset()">Reset</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </body>
+
+</html>

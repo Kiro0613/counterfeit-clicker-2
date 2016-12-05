@@ -1,0 +1,344 @@
+.window
+{
+    display: block;
+    font-family: sans-serif;
+    background-image: url(assets/brick_bg_repeat.png);
+    margin: 0;
+    /*background-color: #2A2A2A;
+    color: #F0F0F0;*/
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    border: 9px solid;
+    border-image: url(assets/border_ph.png) 9 round;
+
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.window .left
+{
+    display: inline-block;
+    background-color: #9A0000;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 9px solid;
+    border-image: url(assets/border_side_ph.png) 9 round;
+
+    position: absolute;
+}
+
+.window .middle
+{
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    background-attachment: local;
+    background-image: url(assets/brick_bg_small.png);
+    text-align: center;
+
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    position: absolute;
+    left: 25%;
+}
+
+.window .right
+{
+    background-color: #E0E0E0;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 9px solid;
+    border-image: url(assets/border_side_ph.png) 9 round;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: absolute;
+    left: 80%;
+}
+
+.left .leftmenu
+{
+    display: inline-block;
+    background-color: #3F3F3F;
+    text-align: center;
+    height: auto;
+    width: 85%;
+    padding: 15px;
+
+    position: relative;
+    top: 10%;
+}
+
+.leftmenu .wallet
+{
+    display: inline-block;
+    background-color: #D1D1D1;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #000000;
+
+    position: relative;
+}
+
+.leftmenu .counterfeitbutton
+{
+    display: inline-block;
+    background-color: #D1D1D1;
+    width: 100%;
+    height: auto;
+    padding: 10 0 10 0;
+    border-bottom: 1px solid #000000;
+
+    position: relative;
+}
+
+.leftmenu .cashpersec
+{
+    display: inline-block;
+    background-color: #D1D1D1;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #000000;
+
+    position: relative;
+}
+
+.middle .middlemenu
+{
+    display: block;
+    height: auto;
+    width: 90%;
+    margin: 30;
+    display: inline-block;
+    background-color: #565656;
+    padding: 20px;
+    color: #E4E4E4;
+
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.middlemenu .store
+{
+    display: block;
+    background-color: #444444;
+    padding: 30 10 30 10;
+}
+
+.store .menuheader
+{
+    display: inline-block;
+    text-align: center;
+    border: 4px solid #FFFFFF;
+    border-bottom: none;
+    font-size: 4em;
+    background-color: #2D2D2D;
+    width: 93%;
+}
+
+.store .storerow
+{
+    display: inline-block;
+    border: 4px solid #FFFFFF;
+    background-color: #FFFFFF;
+    width: 93%;
+    height: 23%;
+    vertical-align: middle;
+
+    position: relative;
+}
+
+.storerow .storecell
+{
+    display: inline-block;
+    background-color: maroon;
+    width: 49.7%;
+    height: 100%;
+
+    position: relative;
+
+    vertical-align: top;
+    text-align: center;
+}
+
+.storecell .storecellcontents
+{
+    display: inline;
+    background-color: inherit;
+
+    height: 20%;
+}
+
+.middlemenu .inv
+{
+    display: block;
+    background-color: #444444;
+    padding: 30 10 30 10;
+    width: 95%;
+    text-align: center;
+    align-content: center;
+}
+
+.inv .menuheader
+{
+    display: inline-block;
+    text-align: center;
+    border: 4px solid #FFFFFF;
+    font-size: 4em;
+    background-color: #2D2D2D;
+    width: inherit;
+}
+
+.inv .invrow
+{
+    display: inline-flex;
+    box-sizing: content-box;
+    width: inherit;
+    border: 4px solid #FFFFFF;
+    border-top: none;
+    background-color: #2E2E2E;
+    font-size: 1.5em;
+    text-align: center;
+    align-self: center;
+
+    position: relative;
+}
+
+.invrow .header
+{
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.invrow .invrowleft
+{
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: red;
+    width: 50%;
+
+    position: relative;
+}
+
+.invrow .invrowright
+{
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: blue;
+    width: 50%;
+
+    position: relative;
+}
+
+
+.right .rightmenu
+{
+    display: block;
+    box-sizing: border-box;
+    background-color: #282828;
+    color: #E6E6E6;
+    text-align: center;
+    max-height: 100%;
+}
+
+.rightmenu .rightmenudiv
+{
+    box-sizing: border-box;
+    background-image: url(assets/testimg2.png);
+    width: 100%;
+    height: 1%;
+}
+
+.rightmenu .menuheader
+{
+    display: inline-block;
+    font-size: 4em;
+    height: auto;
+    padding: 5 0 5 0;
+}
+
+.rightmenu .rightmenucontents
+{
+    background-color: #101010;
+}
+
+.rightmenucontents .upgraderow
+{
+    display: none;
+    visibility: auto;
+    box-sizing: border-box;
+    height: 11.3%;
+}
+
+.upgraderow .rowhead
+{
+    font-size: 1.4em;
+    background-color: #444444;
+    height: auto;
+    border-top: 2px solid #FFFFFF;
+}
+
+.upgraderow .rowbody
+{
+    display: inline-flex;
+    width: 100%;
+    height: 71%;
+    background-color: #00FF00;
+    border-top: 2px solid #FFFFFF;
+    text-overflow: clip;
+}
+
+.rowbody .rowone
+{
+    display: inline-block;
+    width: 33%;
+    background-color: #FF0000;
+}
+
+.rowbody .rowtwo
+{
+    display: inline-block;
+    width: 34%;
+    background-color: #FFFF00;
+}
+
+.rowbody .rowthree
+{
+    display: inline-block;
+    width: 33%;
+    background-color: #0000FF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

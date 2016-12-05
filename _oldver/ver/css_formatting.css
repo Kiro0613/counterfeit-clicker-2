@@ -1,0 +1,108 @@
+.window
+{
+    display: block;
+    font-family: sans-serif;
+    margin: 0px;
+    /*background-color: #2A2A2A;
+    color: #F0F0F0;*/
+
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.window .left
+{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+}
+
+.window .middle
+{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-image: url(assets/brick_bg_repeat.png);
+    text-align: center;
+
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.window .right
+{
+    display: inline-block;
+    width: 24%;
+}
+
+.middle .middlemenu
+{
+    display: block;
+    height: auto;
+    width: 90%;
+    margin: 30;
+    display: inline-block;
+    background-color: #565656;
+    padding: 20px;
+    color: #E4E4E4;
+
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.middlemenu .store
+{
+    display: block;
+    background-color: #444444;
+    margin: 20px;
+    height: auto;
+}
+
+.store .menuheader
+{
+    display: inline-block;
+    text-align: center;
+    border: 4px solid #FFFFFF;
+    border-bottom: none;
+    font-size: 4em;
+    background-color: #2D2D2D;
+    width: 93%;
+}
+
+.store .storerow
+{
+    display: inline-block;
+    border: 4px solid #FFFFFF;
+    background-color: #FFFFFF;
+    width: 93%;
+    height: 23%;
+    vertical-align: middle;
+
+    position: relative;
+}
+
+.storerow .storecell
+{
+    display: inline-block;
+    background-color: maroon;
+    width: 49.7%;
+    height: 100%;
+
+    position: relative;
+
+    vertical-align: top;
+    text-align: center;
+}
+
+.storecell .storecellcontents
+{
+    display: inline;
+    background-color: inherit;
+
+    height: 20%;
+}
+
+.middlemenu .inv

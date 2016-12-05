@@ -1,0 +1,11 @@
+<html>
+
+    <head>
+
+        <title>Javascript Include Test</title>
+
+    </head>
+
+    <script src="test.js"></script>
+
+</html>

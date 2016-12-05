@@ -1,0 +1,419 @@
+<html>
+
+    <!-- Project started: 8/18/2016 -->
+
+    <head>
+
+        <title>Counterfeit Clicker 2!!</title>
+
+    </head>
+
+    <!-- CSS Starts Here -->
+    <style>
+
+        .bg
+        {
+            background: #EEFEEE;
+        }
+
+        .arial
+        {
+            font-family: sans-serif;
+        }
+
+
+        .counterfeit
+        {
+            border-radius: 12px;
+            font-family: Arial;
+            color: #000000;
+            font-size: 40px;
+            background: #f0f0f0;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+
+        .counterfeit:hover
+        {
+            background: #ababab;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .counterfeit:active
+        {
+            background: #9c9c9c;
+            text-decoration: none;
+        }
+
+
+        .buy
+        {
+            border-radius: 8px;
+            font-family: Arial;
+            color: #000000;
+            font-size: 25px;
+            background: #f0f0f0;
+            padding: 7px 15px 7px 15px;
+            text-decoration: none;
+        }
+
+        .buy:hover
+        {
+            background: #ababab;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .buy:active
+        {
+            background: #9c9c9c;
+            text-decoration: none;
+        }
+
+
+
+        .tooltip
+        {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext
+        {
+            visibility: hidden;
+            width: auto;
+            background-color: #dddddd;
+            color: #000000;
+            text-align: center;
+            border-radius: 10px;
+            padding-left: 12px;
+            padding-right: 12px;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltip:hover .tooltiptext
+        {
+            visibility: visible;
+        }
+
+
+        .tooltipleft
+        {
+            position: relative;
+            display: inline;
+        }
+
+        .tooltipleft .tooltiptextleft
+        {
+            visibility: hidden;
+            width: auto;
+            background-color: #dddddd;
+            color: #000000;
+            text-align: center;
+            border-radius: 10px;
+            padding-left: 12px;
+            padding-right: 12px;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            right: 105%;
+        }
+
+        .tooltipleft:hover .tooltiptextleft
+        {
+            visibility: visible;
+        }
+
+
+
+        .tooltipbig
+        {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltipbig .tooltiptextbig
+        {
+            visibility: hidden;
+            width: auto;
+            font-size: 25px;
+            background-color: #dddddd;
+            color: #000000;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px 15px 10px 15px;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltipbig:hover .tooltiptextbig
+        {
+            visibility: visible;
+        }
+
+    </style>
+    <!-- CSS Ends Here -->
+
+
+
+
+    <!-- JavaScript starts here -->
+    <script>
+
+        //Cash Money vars
+        var cash_addOnClick = 1;
+        var cash_inPot = 0;
+
+
+        //Player Inv vars
+        var inv_playerCash = 0;
+
+        var inv_bldgOne = 0;
+        var inv_bldgTwo = 0;
+        var inv_bldgThree = 0;
+        var inv_bldgFour = 0;
+
+
+        //Building Name variables
+        var name_bldgOne = "name_bldgOne"
+        var name_bldgTwo = "name_bldgTwo"
+        var name_bldgThree = "name_bldgThree"
+        var name_bldgFour = "name_bldgFour"
+
+
+        //Bulding Price vars
+        var price_bldgOne = 10;
+        var price_bldgTwo = 20;
+        var price_bldgThree = 30;
+        var price_bldgFour = 40;
+
+
+        //Building Value vars
+        var val_bldgOne = 1;
+        var val_bldgTwo = 2;
+        var val_bldgThree = 3;
+        var val_bldgFour = 4;
+
+
+
+        //Adding cash vars
+        var cash_perSec
+
+        var cash_bldgOneAdd = 0;
+        var cash_bldgTwoAdd = 0;
+        var cash_bldgThreeAdd = 0;
+        var cash_bldgFourAdd = 0;
+
+
+        //Other vars
+
+
+        //Cash adding fncts
+        function cashButtonClick()
+        {
+            inv_playerCash += cash_addOnClick;
+        }
+
+
+        setInterval(
+        function()
+        {
+            inv_playerCash += cash_perSec;
+        }
+        , 1000)
+
+
+
+        //Buying fncts
+        function buy_bldgOne()
+        {
+            if(inv_playerCash >= price_bldgOne)
+            {
+                inv_playerCash = inv_playerCash - price_bldgOne
+                inv_bldgOne++
+            }
+        }
+
+        function buy_bldgTwo()
+        {
+             if(inv_playerCash >= price_bldgTwo)
+             {
+                 inv_playerCash = inv_playerCash - price_bldgTwo
+                 inv_bldgTwo++
+             }
+        }
+
+        function buy_bldgThree()
+        {
+            if(inv_playerCash >= price_bldgThree)
+             {
+                 inv_playerCash = inv_playerCash - price_bldgThree
+                 inv_bldgThree++
+             }
+        }
+
+        function buy_bldgFour()
+        {
+            if(inv_playerCash >= price_bldgFour)
+            {
+                inv_playerCash = inv_playerCash - price_bldgFour
+                inv_bldgFour++
+            }
+        }
+
+
+
+        //VAR UPDATES
+        setInterval(
+        function updateVar()
+            {
+                document.getElementById("inv_playerCash").innerHTML = inv_playerCash;
+
+                document.getElementById("inv_bldgOne").innerHTML = inv_bldgOne;
+                document.getElementById("inv_bldgTwo").innerHTML = inv_bldgTwo;
+                document.getElementById("inv_bldgThree").innerHTML = inv_bldgThree;
+                document.getElementById("inv_bldgFour").innerHTML = inv_bldgFour;
+
+                document.getElementById("price_bldgOne").innerHTML = price_bldgOne;
+                document.getElementById("price_bldgTwo").innerHTML = price_bldgTwo;
+                document.getElementById("price_bldgThree").innerHTML = price_bldgThree;
+                document.getElementById("price_bldgFour").innerHTML = price_bldgFour;
+
+                document.getElementById("name_bldgOne").innerHTML = name_bldgOne;
+                document.getElementById("name_bldgTwo").innerHTML = name_bldgTwo;
+                document.getElementById("name_bldgThree").innerHTML = name_bldgThree;
+                document.getElementById("name_bldgFour").innerHTML = name_bldgFour;
+
+                document.getElementById("val_bldgOne").innerHTML = val_bldgOne;
+                document.getElementById("val_bldgTwo").innerHTML = val_bldgTwo;
+                document.getElementById("val_bldgThree").innerHTML = val_bldgThree;
+                document.getElementById("val_bldgFour").innerHTML = val_bldgFour;
+
+                document.getElementById("cash_bldgOneAdd").innerHTML = cash_bldgOneAdd;
+                document.getElementById("cash_bldgTwoAdd").innerHTML = cash_bldgTwoAdd;
+                document.getElementById("cash_bldgThreeAdd").innerHTML = cash_bldgThreeAdd;
+                document.getElementById("cash_bldgFourAdd").innerHTML = cash_bldgFourAdd;
+
+                document.getElementById("cash_perSec").innerHTML = cash_perSec;
+
+                cash_bldgOneAdd = val_bldgOne * inv_bldgOne;
+                cash_bldgTwoAdd = val_bldgTwo * inv_bldgTwo;
+                cash_bldgThreeAdd = val_bldgThree * inv_bldgThree;
+                cash_bldgFourAdd = val_bldgFour * inv_bldgFour;
+                cash_perSec = cash_bldgOneAdd + cash_bldgTwoAdd + cash_bldgThreeAdd + cash_bldgFourAdd;
+            }
+        , 10)
+
+
+
+        function devCheat()
+        {
+            inv_playerCash += 99999999
+        }
+
+    </script>
+    <!-- JavaScript Ends Here -->
+
+
+    <body>
+
+        <table align="center" width="70%" border=1 class="bg">
+
+            <tr>
+
+                <!-- Left window -->
+                <td width="23%" align="center" valign="top">
+
+                    <font size="7" class="arial"><span id="inv_playerCash"></span></font>
+                    <br>
+                    <button class="counterfeit" onclick="cashButtonClick()">COUNTERFEIT</button>
+                    <br><br>
+                    <font size="7"><span id="cash_perSec"></span></font>
+                    <br>
+                    <font size="5" class="arial">cash per second</font>
+
+                </td>
+
+                <!-- Middle window -->
+                <td width="24%" align="center">
+
+                    <font size="7" class="arial">INVENTORY</font><br>
+                    <br>
+                    <font size="6" class="arial">
+
+                        <span id="inv_bldgOne"></span>
+                        <div class="tooltipbig">
+                            <span id="name_bldgOne"></span>'s <span class="tooltiptextbig"><span id="cash_bldgOneAdd"></span>CPS</span>
+                        </div><br>
+
+                        <span id="inv_bldgTwo"></span>
+                        <div class="tooltipbig">
+                            <span id="name_bldgTwo"></span>'s <span class="tooltiptextbig"><span id="cash_bldgTwoAdd"></span>CPS</span>
+                        </div><br>
+
+                        <span id="inv_bldgThree"></span>
+                        <div class="tooltipbig">
+                            <span id="name_bldgThree"></span>'s <span class="tooltiptextbig"><span id="cash_bldgThreeAdd"></span>CPS</span>
+                        </div><br>
+
+                        <span id="inv_bldgFour"></span>
+                        <div class="tooltipbig">
+                            <span id="name_bldgFour"></span>'s <span class="tooltiptextbig"><span id="cash_bldgFourAdd"></span>CPS</span>
+                        </div>
+
+                    </font>
+
+                </td>
+
+                <!-- Right window -->
+                <td width="18%" align="center" valign="top">
+
+                    <font size="5" class="arial">
+
+                        <button class="buy" onclick="buy_bldgOne()">Buy bldg1</button> <button class="buy" onclick="buy_bldgTwo()">Buy bldg2</button><br>
+
+                        <div class="tooltipleft">
+                            $<span id="price_bldgOne"></span><span class="tooltiptextleft"><span id="val_bldgOne"></span>CPS</span>
+                        </div> |
+
+                        <div class="tooltip">
+                            $<span id="price_bldgTwo"></span><span class="tooltiptext"><span id="val_bldgTwo"></span>CPS</span>
+                        </div>
+
+                        <br>
+                        <button class="buy" onclick="buy_bldgThree()">Buy bldg3</button> <button class="buy" onclick="buy_bldgFour()">Buy bldg4</button>
+                        <br>
+
+                        <div class="tooltipleft">
+                            $<span id="price_bldgThree"></span><span class="tooltiptextleft"><span id="val_bldgThree"></span>CPS</span>
+                        </div> |
+
+                        <div class="tooltip">
+                            $<span id="price_bldgFour"></span><span class="tooltiptext"><span id="val_bldgFour"></span>CPS</span>
+                        </div>
+
+                    </font>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </body>
+
+
+    <footer>
+
+        (c)2016 JOL Games <button onclick="devCheat()">devCheat()</button>
+
+    </footer>
+
+</html>

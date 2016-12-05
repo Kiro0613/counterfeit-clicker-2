@@ -1,0 +1,25 @@
+<html>
+
+    <head>
+
+        <title>Maitaikhu</title>
+
+    </head>
+
+    <script>
+
+        var counter = parseInt(prompt("Pick a number"))
+        var string = "&#3626;"
+        var symbol = "&#3655;"
+
+        while(counter > 0)
+        {
+            string += symbol;
+            counter--
+        }
+
+        document.write(string)
+
+    </script>
+
+</html>

@@ -1,0 +1,1427 @@
+<html>
+
+    <!-- Project started: 8/18/2016 -->
+
+    <head>
+
+        <title>Counterfeit Clicker 2!!</title>
+        <link rel="stylesheet" type="text/css" href="vB7.css">
+        <link rel="stylesheet" type="text/css" href="css_formatting_buttons.css">
+
+    </head>
+
+    <!-- JavaScript starts here -->
+
+    <script src="vB7.js"></script>
+    <script src="dev_js.js"></script>
+
+    <script>
+
+        //Google Analytics Stuff
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-84323970-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- JavaScript Ends Here -->
+
+    <body class="window">
+
+        <!-- Left window -->
+        <div class="left">
+
+            <div class="leftmenu">
+
+                <div class="wallet">
+
+                    <font size="7" class="arial"><span id="inv_playerCash"></span></font>
+
+                </div>
+
+                <br>
+
+                <div class="counterfeitbutton">
+
+                    <button class="counterfeit" onclick="cashButtonClick()">COUNTERFEIT</button>
+
+                </div>
+
+                <br>
+
+                <div class="cashpersec">
+
+                    <font size="7" class="arial"><span id="cash_perSec"></span></font>
+
+                    <font size="5" class="arial">cash per second</font>
+
+                </div>
+
+
+            </div>
+
+            <div class="leftmenu" style="top:66%;">
+
+                <button onclick="devCheat()">devCheat()</button> | <button onclick="unlockAll()">unlockAll()</button>
+
+            </div>
+
+        </div>
+
+        <!-- Middle window -->
+        <div class="middle">
+
+            <div class="middlemenu">
+
+                <div class="store">
+
+                    <div class="menuheader">STORE</div>
+
+                    <!-- Counterfeit + Gambling -->
+                    <div class="storerow">
+
+                        <!-- Counterfeit -->
+                        <div class="storecellleft">
+
+                            <div class="storecellcontentsleft">
+
+                                <p style="font-size:2em;">COUNTERFEIT</p><br>
+
+                                <button class="button" onclick="buy(id_bldgOne)">Buy: $<span id="price_bldgOne"></span></button>
+                                <span id="name_bldgOneCopy"></span>
+                                <button class="button" onclick="sell(id_bldgOne)">Sell: $<span id="price_bldgOneSell"></span></button>
+
+                                <br>
+
+                                <button class="button" onclick="buy(id_bldgTwo)">Buy: $<span id="price_bldgTwo"></span></button>
+                                <span id="name_bldgTwoCopy"></span>
+                                <button class="button" onclick="sell(id_bldgTwo)">Sell: $<span id="price_bldgTwoSell"></span></button>
+
+                                <br>
+
+                                <button class="buy" onclick="buy(id_bldgThree)">Buy: $<span id="price_bldgThree"></span></button>
+                                <span id="name_bldgThreeCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgThree)">Sell: $<span id="price_bldgThreeSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Gambling -->
+                        <div class="storecellright">
+
+                            <div class="storecellcontentsright">
+
+                                <p style="font-size:2em;">GAMBLING</p><br>
+
+                                <button class="button" onclick="buy(id_bldgFour)">Buy: $<span id="price_bldgFour"></span></button>
+                                <span id="name_bldgFourCopy"></span>
+                                <button class="button" onclick="sell(id_bldgFour)">Sell: $<span id="price_bldgFourSell"></span></button>
+
+                                <br>
+
+                                <button class="button" onclick="buy(id_bldgFive)">Buy: $<span id="price_bldgFive"></span></button>
+                                <span id="name_bldgFiveCopy"></span>
+                                <button class="button" onclick="sell(id_bldgFive)">Sell: $<span id="price_bldgFiveSell"></span></button>
+
+                                <br>
+
+                                <button class="buy" onclick="buy(id_bldgSix)">Buy: $<span id="price_bldgSix"></span></button>
+                                <span id="name_bldgSixCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgSix)">Sell: $<span id="price_bldgSixSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Digital + Drugs -->
+                    <div class="storerow">
+
+                        <!-- Digital -->
+                        <div class="storecellleft">
+
+                            <div class="storecellcontentsleft">
+
+                                <p style="font-size:2em;">DIGITAL</p><br>
+
+                                <button class="button" onclick="buy(id_bldgSeven)">Buy: $<span id="price_bldgSeven"></span></button>
+                                <span id="name_bldgSevenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgSeven)">Sell: $<span id="price_bldgSevenSell"></span></button>
+
+                                <br>
+
+                                <button class="button" onclick="buy(id_bldgEight)">Buy: $<span id="price_bldgEight"></span></button>
+                                <span id="name_bldgEightCopy"></span>
+                                <button class="button" onclick="sell(id_bldgEight)">Sell: $<span id="price_bldgEightSell"></span></button>
+
+                                <br>
+
+                                <button class="buy" onclick="buy(id_bldgNine)">Buy: $<span id="price_bldgNine"></span></button>
+                                <span id="name_bldgNineCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgNine)">Sell: $<span id="price_bldgNineSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Drugs -->
+                        <div class="storecellright">
+
+                            <div class="storecellcontentsright">
+
+                                <p style="font-size:2em;">DRUGS</p><br>
+
+                                <button class="button" onclick="buy(id_bldgTen)">Buy: $<span id="price_bldgTen"></span></button>
+                                <span id="name_bldgTenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgTen)">Sell: $<span id="price_bldgTenSell"></span></button>
+
+                                <br>
+
+                                <button class="button" onclick="buy(id_bldgEleven)">Buy: $<span id="price_bldgEleven"></span></button>
+                                <span id="name_bldgElevenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgEleven)">Sell: $<span id="price_bldgElevenSell"></span></button>
+
+                                <br>
+
+                                <button class="buy" onclick="buy(id_bldgTwelve)">Buy: $<span id="price_bldgTwelve"></span></button>
+                                <span id="name_bldgTwelveCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgTwelve)">Sell: $<span id="price_bldgTwelveSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Stealing + Professionals -->
+                    <div class="storerow">
+
+                        <!-- Stealing -->
+                        <div class="storecellleft">
+
+                            <div class="storecellcontentsleft">
+
+                                <p style="font-size:2em;">STEALING</p><br>
+
+                                <button class="button" onclick="buy(id_bldgThirteen)">Buy: $<span id="price_bldgThirteen"></span></button>
+                                <span id="name_bldgThirteenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgThirteen)">Sell: $<span id="price_bldgThirteenSell"></span></button>
+
+                                <br>
+
+                                <button class="button" onclick="buy(id_bldgFourteen)">Buy: $<span id="price_bldgFourteen"></span></button>
+                                <span id="name_bldgFourteenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgFourteen)">Sell: $<span id="price_bldgFourteenSell"></span></button>
+
+                                <br>
+
+                                <button class="buy" onclick="buy(id_bldgFifteen)">Buy: $<span id="price_bldgFifteen"></span></button>
+                                <span id="name_bldgFifteenCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgFifteen)">Sell: $<span id="price_bldgFifteenSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Professionals -->
+                        <div class="storecellright">
+
+                            <div class="storecellcontentsright">
+
+                                <p style="font-size:2em;">PROFESSIONALS</p><br>
+
+                                <button class="button" onclick="buy(id_bldgSixteen)">Buy: $<span id="price_bldgSixteen"></span></button>
+                                <span id="name_bldgSixteenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgSixteen)">Sell: $<span id="price_bldgSixteenSell"></span></button>
+
+                                <br>
+
+                                <button class="button" onclick="buy(id_bldgSeventeen)">Buy: $<span id="price_bldgSeventeen"></span></button>
+                                <span id="name_bldgSeventeenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgSeventeen)">Sell: $<span id="price_bldgSeventeenSell"></span></button>
+
+                                <br>
+
+                                <button class="buy" onclick="buy(id_bldgEighteen)">Buy: $<span id="price_bldgEighteen"></span></button>
+                                <span id="name_bldgEighteenCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgEighteen)">Sell: $<span id="price_bldgEighteenSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="inv">
+
+                    <div class="invheader">INVENTORY</div>
+
+                    <div class="disabled" id="invrowOne">
+
+                        <div class="invrowleft" id="invrowoneleft">
+
+                            <span class="disabled" id="itemoneinvdisplay">
+
+                                <span id="name_bldgOne"></span>
+                                <span id="inv_bldgOne"></span>
+                                <span id="cash_bldgOneAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemtwoinvdisplay">
+
+                                <span id="name_bldgTwo"></span>
+                                <span id="inv_bldgTwo"></span>
+                                <span id="cash_bldgTwoAdd"></span>
+
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemthreeinvdisplay">
+
+                                <span id="name_bldgThree"></span>
+                                <span id="inv_bldgThree"></span>
+                                <span id="cash_bldgThreeAdd"></span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="disabled" id="invrowoneright">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="disabled" id="invrowTwo">
+
+                        <div class="invrowleft" id="invrowtwoleft">
+
+                            <span class="disabled" id="itemfourinvdisplay">
+
+                                <span id="name_bldgFour"></span>
+                                <span id="inv_bldgFour"></span>
+                                <span id="cash_bldgFourAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemfiveinvdisplay">
+
+                                <span id="name_bldgFive"></span>
+                                <span id="inv_bldgFive"></span>
+                                <span id="cash_bldgFiveAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemsixinvdisplay">
+
+                                <span id="name_bldgSix"></span>
+                                <span id="inv_bldgSix"></span>
+                                <span id="cash_bldgSixAdd"></span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="disabled" id="invrowtworight">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="disabled" id="invrowThree">
+
+                        <div class="invrowleft" id="invrowthreeleft">
+
+                            <span class="disabled" id="itemseveninvdisplay">
+
+                                <span id="name_bldgSeven"></span>
+                                <span id="inv_bldgSeven"></span>
+                                <span id="cash_bldgSevenAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemeightinvdisplay">
+
+                                <span id="name_bldgEight"></span>
+                                <span id="inv_bldgEight"></span>
+                                <span id="cash_bldgEightAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemnineinvdisplay">
+
+                                <span id="name_bldgNine"></span>
+                                <span id="inv_bldgNine"></span>
+                                <span id="cash_bldgNineAdd"></span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="disabled" id="invrowthreeright">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="disabled" id="invrowFour">
+
+                        <div class="invrowleft" id="invrowfourleft">
+
+                            <span class="disabled" id="itemteninvdisplay">
+
+                                <span id="name_bldgTen"></span>
+                                <span id="inv_bldgTen"></span>
+                                <span id="cash_bldgTenAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemeleveninvdisplay">
+
+                                <span id="name_bldgEleven"></span>
+                                <span id="inv_bldgEleven"></span>
+                                <span id="cash_bldgElevenAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemtwelveinvdisplay">
+
+                                <span id="name_bldgTwelve"></span>
+                                <span id="inv_bldgTwelve"></span>
+                                <span id="cash_bldgTwelveAdd"></span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="disabled" id="invrowfourright">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="disabled" id="invrowFive">
+
+                        <div class="invrowleft" id="invrowfiveleft">
+
+                            <span class="disabled" id="itemthirteeninvdisplay">
+
+                                <span id="name_bldgThirteen"></span>
+                                <span id="inv_bldgThirteen"></span>
+                                <span id="cash_bldgThirteenAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemfourteeninvdisplay">
+
+                                <span id="name_bldgFourteen"></span>
+                                <span id="inv_bldgFourteen"></span>
+                                <span id="cash_bldgFourteenAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemfifteeninvdisplay">
+
+                                <span id="name_bldgFifteen"></span>
+                                <span id="inv_bldgFifteen"></span>
+                                <span id="cash_bldgFifteenAdd"></span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="disabled" id="invrowfiveright">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="disabled" id="invrowSix">
+
+                        <div class="invrowleft" id="invrowsixleft">
+
+                            <span class="disabled" id="itemsixteeninvdisplay">
+
+                                <span id="name_bldgSixteen"></span>
+                                <span id="inv_bldgSixteen"></span>
+                                <span id="cash_bldgSixteenAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemseventeeninvdisplay">
+
+                                <span id="name_bldgSeventeen"></span>
+                                <span id="inv_bldgSeventeen"></span>
+                                <span id="cash_bldgSeventeenAdd"></span>
+
+                            </span>
+
+                            <br>
+
+                            <span class="disabled" id="itemeighteeninvdisplay">
+
+                                <span id="name_bldgEighteen"></span>
+                                <span id="inv_bldgEighteen"></span>
+                                <span id="cash_bldgEighteenAdd"></span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="disabled" id="invrowsixright">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="invrow">
+
+                        <div class="invrowright" id="invrowsevenleft">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                        <div class="invrowright" id="invrowsevenright">
+
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">P</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">A</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+                            <span class="upgrade">M</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                (c)2016 JOL Games
+
+            </div>
+
+        </div>
+
+        <!-- Right window -->
+        <div class="right">
+
+            <div class="rightmenu">
+
+                <div class="menuheader">UPGRADES</div>
+
+                <div class="rightmenucontents">
+
+                    <!-- Click Upgrades -->
+                    <div id="upgRow_click" class="upgraderow">
+
+                        <div class="rowhead">Clicking</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="colzero">
+
+                                <div class="locked" id="upgList_bldgZero">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listzero', 'head')" onmouseout="closeList('listzero', 'head')">Cash Per Click</span>
+
+                                    <div class="leftcolumnlist" id="listzero" onmouseover="openList('listzero', 'body')" onmouseout="closeList('listzero', 'body')" style="width:100%;">
+
+                                        <span class="lockedupg" id="upg_bldgZero_A">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_B">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_C">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_D">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_E">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_F">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_G">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_H">PC</span>
+                                        <span class="lockedupg" id="upg_bldgZero_I">PC</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Counterfeit Upgrades -->
+                    <div id="upgRow_counterfeit" class="upgraderow">
+
+                        <div class="rowhead">Counterfeit</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="colone">
+
+                                <div class="locked" id="upgList_bldgOne">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listone', 'head')" onmouseover="openList('listone', 'headhover')" onmouseout="closeList('listone', 'head')">Printer</span>
+
+                                    <div class="leftcolumnlist" id="listone" onmouseover="openList('listone', 'body')" onmouseout="closeList('listone', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgOne_A">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_B">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_C">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_D">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_E">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_F">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_G">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_H">P</span>
+                                        <span class="lockedupg" id="upg_bldgOne_I">P</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgTwo">
+
+                                    <span class="middlecolumnhead" style="cursor:pointer" onclick="openList('listtwo', 'head')" onmouseout="closeList('listtwo', 'head')">Artist</span>
+
+                                    <div class="middlecolumnlist" id="listtwo" onmouseover="openList('listtwo', 'body')" onmouseout="closeList('listtwo', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgTwo_A">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_B">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_C">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_D">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_E">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_F">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_G">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_H">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_I">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_J">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_K">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_L">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_M">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_N">A</span>
+                                        <span class="lockedupg" id="upg_bldgTwo_O">A</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgThree">
+
+                                    <span class="rightcolumnhead" style="cursor:pointer" onclick="openList('listthree', 'head')" onmouseout="closeList('listthree', 'head')">Mint</span>
+
+                                    <div class="rightcolumnlist" id="listthree" onmouseover="openList('listthree', 'body')" onmouseout="closeList('listthree', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgThree_A">M</span>
+                                        <span class="lockedupg" id="upg_bldgThree_B">M</span>
+                                        <span class="lockedupg" id="upg_bldgThree_C">M</span>
+                                        <span class="lockedupg" id="upg_bldgThree_D">M</span>
+                                        <span class="lockedupg" id="upg_bldgThree_E">M</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Gambling Upgrades -->
+                    <div id="upgRow_gambling" class="upgraderow">
+
+                        <div class="rowhead">Gambling</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="coltwo">
+
+                                <div class="locked" id="upgList_bldgFour">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listfour', 'head')" onmouseout="closeList('listfour', 'head')">Highroller</span>
+
+
+                                    <div class="leftcolumnlist" id="listfour" onmouseover="openList('listfour', 'body')" onmouseout="closeList('listfour', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgFour_A">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_B">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_C">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_D">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_E">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_F">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_G">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_H">H</span>
+                                        <span class="lockedupg" id="upg_bldgFour_I">H</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgFive">
+
+                                    <span class="middlecolumnhead" style="cursor:pointer" onclick="openList('listfive', 'head')" onmouseout="closeList('listfive', 'head')">Con Artist</span>
+
+
+                                    <div class="middlecolumnlist" id="listfive" onmouseover="openList('listfive', 'body')" onmouseout="closeList('listfive', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgFive_A">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_B">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_C">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_D">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_E">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_F">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_G">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_H">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_I">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_J">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_K">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_L">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_M">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_N">CA</span>
+                                        <span class="lockedupg" id="upg_bldgFive_O">CA</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgSix">
+
+                                    <span class="rightcolumnhead" style="cursor:pointer" onclick="openList('listsix', 'head')" onmouseout="closeList('listsix', 'head')">Casino</span>
+
+
+                                    <div class="rightcolumnlist" id="listsix" onmouseover="openList('listsix', 'body')" onmouseout="closeList('listsix', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgSix_A">Ca</span>
+                                        <span class="lockedupg" id="upg_bldgSix_B">Ca</span>
+                                        <span class="lockedupg" id="upg_bldgSix_C">Ca</span>
+                                        <span class="lockedupg" id="upg_bldgSix_D">Ca</span>
+                                        <span class="lockedupg" id="upg_bldgSix_E">Ca</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Digital Upgrades -->
+                    <div id="upgRow_digital" class="upgraderow">
+                    <div class="rightmenudiv"></div>
+
+                        <div class="rowhead">Digital</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="colthree">
+
+                                <div class="locked" id="upgList_bldgSeven">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listseven', 'head')" onmouseout="closeList('listseven', 'head')">Pirate</span>
+
+
+                                    <div class="leftcolumnlist" id="listseven" onmouseover="openList('listseven', 'body')" onmouseout="closeList('listseven', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgSeven_A">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_B">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_C">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_D">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_E">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_F">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_G">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_H">Pi</span>
+                                        <span class="lockedupg" id="upg_bldgSeven_I">Pi</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgEight">
+
+                                    <span class="middlecolumnhead" style="cursor:pointer" onclick="openList('listeight', 'head')" onmouseout="closeList('listeight', 'head')">Hacker</span>
+
+
+                                    <div class="middlecolumnlist" id="listeight" onmouseover="openList('listeight', 'body')" onmouseout="closeList('listeight', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgEight_A">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_B">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_C">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_D">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_E">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_F">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_G">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_H">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_I">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_J">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_K">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_L">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_M">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_N">H</span>
+                                        <span class="lockedupg" id="upg_bldgEight_O">H</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgNine">
+
+                                    <span class="rightcolumnhead" style="cursor:pointer" onclick="openList('listnine', 'head')" onmouseout="closeList('listnine', 'head')">Cyber Cafe</span>
+
+
+                                    <div class="rightcolumnlist" id="listnine" onmouseover="openList('listnine', 'body')" onmouseout="closeList('listnine', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgNine_A">Cf</span>
+                                        <span class="lockedupg" id="upg_bldgNine_B">Cf</span>
+                                        <span class="lockedupg" id="upg_bldgNine_C">Cf</span>
+                                        <span class="lockedupg" id="upg_bldgNine_D">Cf</span>
+                                        <span class="lockedupg" id="upg_bldgNine_E">Cf</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Drugs Upgrades -->
+                    <div id="upgRow_drugs" class="upgraderow">
+                    <div class="rightmenudiv"></div>
+
+                        <div class="rowhead">Drugs</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="colfour">
+
+                                <div class="locked" id="upgList_bldgTen">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listten', 'head')" onmouseout="closeList('listten', 'head')">Dealer</span>
+
+                                    <div class="leftcolumnlist" id="listten" onmouseover="openList('listten', 'body')" onmouseout="closeList('listten', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgTen_A">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_B">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_C">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_D">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_E">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_F">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_G">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_H">D</span>
+                                        <span class="lockedupg" id="upg_bldgTen_I">D</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgEleven">
+
+                                    <span class="middlecolumnhead" style="cursor:pointer" onclick="openList('listeleven', 'head')" onmouseout="closeList('listeleven', 'head')">Smuggler</span>
+
+                                    <div class="middlecolumnlist" id="listeleven" onmouseover="openList('listeleven', 'body')" onmouseout="closeList('listeleven', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgEleven_A">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_B">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_C">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_D">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_E">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_F">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_G">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_H">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_I">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_J">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_K">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_L">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_M">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_N">S</span>
+                                        <span class="lockedupg" id="upg_bldgEleven_O">S</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgTwelve">
+
+                                    <span class="rightcolumnhead" style="cursor:pointer" onclick="openList('listtwelve', 'head')" onmouseout="closeList('listtwelve', 'head')">Cartel</span>
+
+                                    <div class="rightcolumnlist" id="listtwelve" onmouseover="openList('listtwelve', 'body')" onmouseout="closeList('listtwelve', 'body')">
+                                        <span class="lockedupg" id="upg_bldgTwelve_A">C</span>
+                                        <span class="lockedupg" id="upg_bldgTwelve_B">C</span>
+                                        <span class="lockedupg" id="upg_bldgTwelve_C">C</span>
+                                        <span class="lockedupg" id="upg_bldgTwelve_D">C</span>
+                                        <span class="lockedupg" id="upg_bldgTwelve_E">C</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Stealing Upgrades -->
+                    <div id="upgRow_stealing" class="upgraderow">
+
+                    <div class="rightmenudiv"></div>
+
+                        <div class="rowhead">Stealing</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="colfive">
+
+                                <div class="locked" id="upgList_bldgThirteen">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listthirteen', 'head')" onmouseout="closeList('listthirteen', 'head')">Robber</span>
+
+
+                                    <div class="leftcolumnlist" id="listthirteen" onmouseover="openList('listthirteen', 'body')" onmouseout="closeList('listthirteen', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgThirteen_A">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_B">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_C">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_D">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_E">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_F">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_G">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_H">R</span>
+                                        <span class="lockedupg" id="upg_bldgThirteen_I">R</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgFourteen">
+
+                                    <span class="middlecolumnhead" style="cursor:pointer" onclick="openList('listfourteen', 'head')" onmouseout="closeList('listfourteen', 'head')">Thief</span>
+
+                                    <div class="middlecolumnlist" id="listfourteen" onmouseover="openList('listfourteen', 'body')" onmouseout="closeList('listfourteen', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgFourteen_A">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_B">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_C">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_D">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_E">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_F">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_G">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_H">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_I">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_J">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_K">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_L">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_M">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_N">T</span>
+                                        <span class="lockedupg" id="upg_bldgFourteen_O">T</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgFifteen">
+
+                                    <span class="rightcolumnhead" style="cursor:pointer" onclick="openList('listfifteen', 'head')" onmouseout="closeList('listfifteen', 'head')">Safe House</span>
+
+                                    <div class="rightcolumnlist" id="listfifteen" onmouseover="openList('listfifteen', 'body')" onmouseout="closeList('listfifteen', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgFifteen_A">SH</span>
+                                        <span class="lockedupg" id="upg_bldgFifteen_B">SH</span>
+                                        <span class="lockedupg" id="upg_bldgFifteen_C">SH</span>
+                                        <span class="lockedupg" id="upg_bldgFifteen_D">SH</span>
+                                        <span class="lockedupg" id="upg_bldgFifteen_E">SH</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Professionals Upgrades -->
+                    <div id="upgRow_professionals" class="upgraderow">
+                    <div class="rightmenudiv"></div>
+
+                        <div class="rowhead">Pros</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="colsix">
+
+                                <div class="locked" id="upgList_bldgSixteen">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listsixteen', 'head')" onmouseout="closeList('listsixteen', 'head')">Killer</span>
+
+
+                                    <div class="leftcolumnlist" id="listsixteen" onmouseover="openList('listsixteen', 'body')" onmouseout="closeList('listsixteen', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgSixteen_A">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_B">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_C">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_D">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_E">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_F">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_G">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_H">Ex</span>
+                                        <span class="lockedupg" id="upg_bldgSixteen_I">Ex</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgSeventeen">
+
+                                    <span class="middlecolumnhead" style="cursor:pointer" onclick="openList('listseventeen', 'head')" onmouseout="closeList('listseventeen', 'head')">Extortionist</span>
+
+                                    <div class="middlecolumnlist" id="listseventeen" onmouseover="openList('listseventeen', 'body')" onmouseout="closeList('listseventeen', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgSeventeen_A">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_B">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_C">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_D">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_E">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_F">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_G">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_H">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_I">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_J">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_K">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_L">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_M">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_N">Et</span>
+                                        <span class="lockedupg" id="upg_bldgSeventeen_O">Et</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="locked" id="upgList_bldgEighteen">
+
+                                    <span class="rightcolumnhead" style="cursor:pointer" onclick="openList('listeighteen', 'head')" onmouseout="closeList('listeighteen', 'head')">Mafia</span>
+
+                                    <div class="rightcolumnlist" id="listeighteen" onmouseover="openList('listeighteen', 'body')" onmouseout="closeList('listeighteen', 'body')">
+
+                                        <span class="lockedupg" id="upg_bldgEighteen_A">Mf</span>
+                                        <span class="lockedupg" id="upg_bldgEighteen_B">Mf</span>
+                                        <span class="lockedupg" id="upg_bldgEighteen_C">Mf</span>
+                                        <span class="lockedupg" id="upg_bldgEighteen_D">Mf</span>
+                                        <span class="lockedupg" id="upg_bldgEighteen_E">Mf</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Overall Upgrades -->
+                    <div id="upgRow_overall" class="upgraderow">
+                    <div class="rightmenudiv"></div>
+
+                        <div class="rowhead">Base UPGs</div>
+
+                        <div class="rowbody">
+
+                            <div class="upgcolumn" id="colseven">
+
+                                <div class="locked" id="upgList_bldgNineteen">
+
+                                    <span class="leftcolumnhead" style="cursor:pointer" onclick="openList('listnineteen', 'head')" onmouseout="closeList('listnineteen', 'head')">Overall</span>
+
+                                    <div class="leftcolumnlist" id="listnineteen" onmouseover="openList('listnineteen', 'body')" onmouseout="closeList('listnineteen', 'body')" style="width:100%;">
+
+                                        <span class="lockedupg" id="upg_bldgNineteen_A">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_B">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_C">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_D">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_E">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_F">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_G">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_H">Ov</span>
+                                        <span class="lockedupg" id="upg_bldgNineteen_I">Ov</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

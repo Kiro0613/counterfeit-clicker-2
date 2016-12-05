@@ -1,0 +1,218 @@
+<html>
+
+    <!-- Project started: 8/18/2016 -->
+
+    <head>
+
+        <title>Counterfeit Clicker 2!!</title>
+
+    </head>
+
+    <!-- CSS Starts Here -->
+    <style>
+        .timesFour
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 400%
+        }
+    </style>
+    <!-- CSS Ends Here -->
+
+
+    <!-- JavaScript starts here -->
+    <script>
+
+        //Cash Money vars
+        var cash_addOnClick = 1;
+        var cash_inPot = 0;
+
+
+        //Player Inv vars
+        var inv_playerCash = 0;
+
+        var inv_bldgOne = 0;
+        var inv_bldgTwo = 0;
+        var inv_bldgThree = 0;
+        var inv_bldgFour = 0;
+
+
+        //Bulding Price vars
+        var price_bldgOne = 10;
+        var price_bldgTwo = 20;
+        var price_bldgThree = 30;
+        var price_bldgFour = 40;
+
+
+        //Building Value vars
+        var val_bldgOne = 1;
+        var val_bldgTwo = 2;
+        var val_bldgThree = 3;
+        var val_bldgFour = 4;
+
+        //Adding to Pot vars
+        var cash_bldgOneAdd = 0;
+        var cash_bldgTwoAdd = 0;
+        var cash_bldgThreeAdd = 0;
+        var cash_bldgFourAdd = 0;
+
+
+        //Cash adding fncts
+        function cashButtonClick()
+        {
+            inv_playerCash = inv_playerCash + cash_addOnClick
+        }
+
+
+        function addToPot()
+        {
+            cash_inPot = cash_inPot + cash_bldgOneAdd + cash_bldgTwoAdd + cash_bldgThreeAdd + cash_bldgFourAdd
+        }
+
+
+        function emptyPot()
+        {
+            inv_playerCash = inv_playerCash + cash_inPot
+            cash_inPot = 0
+        }
+
+
+        //Buying fncts
+        function buy_bldgOne()
+        {
+            if(inv_playerCash >= price_bldgOne)
+            {
+                inv_playerCash = inv_playerCash - price_bldgOne
+                inv_bldgOne++
+            }
+        }
+
+        function buy_bldgTwo()
+        {
+             if(inv_playerCash >= price_bldgTwo)
+             {
+                 inv_playerCash = inv_playerCash - price_bldgTwo
+                 inv_bldgTwo++
+             }
+        }
+
+        function buy_bldgThree()
+        {
+            if(inv_playerCash >= price_bldgThree)
+             {
+                 inv_playerCash = inv_playerCash - price_bldgThree
+                 inv_bldgThree++
+             }
+        }
+
+        function buy_bldgFour()
+        {
+            if(inv_playerCash >= price_bldgFour)
+            {
+                inv_playerCash = inv_playerCash - price_bldgFour
+                inv_bldgFour++
+            }
+        }
+
+
+
+        setInterval(
+        function()
+            {
+                cash_bldgOneAdd = val_bldgOne * inv_bldgOne;
+                cash_bldgTwoAdd = val_bldgTwo * inv_bldgTwo;
+                cash_bldgThreeAdd = val_bldgThree * inv_bldgThree;
+                cash_bldgFourAdd = val_bldgFour * inv_bldgFour;
+                addToPot()
+            }
+        , 1000)
+
+
+        //VAR UPDATES
+        setInterval(
+        function updateVar()
+            {
+                document.getElementById("inv_playerCash").innerHTML = inv_playerCash;
+
+                document.getElementById("inv_bldgOne").innerHTML = inv_bldgOne;
+                document.getElementById("inv_bldgTwo").innerHTML = inv_bldgTwo;
+                document.getElementById("inv_bldgThree").innerHTML = inv_bldgThree;
+                document.getElementById("inv_bldgFour").innerHTML = inv_bldgFour;
+
+                document.getElementById("price_bldgOne").innerHTML = price_bldgOne;
+                document.getElementById("price_bldgTwo").innerHTML = price_bldgTwo;
+                document.getElementById("price_bldgThree").innerHTML = price_bldgThree;
+                document.getElementById("price_bldgFour").innerHTML = price_bldgFour;
+
+                document.getElementById("cash_inPot").innerHTML = cash_inPot;
+            }
+        , 10)
+
+
+
+        function devCheat()
+        {
+            inv_playerCash = 99999999
+        }
+
+    </script>
+    <!-- JavaScript Ends Here -->
+
+
+    <body>
+
+        <table align="center" width="70%" border=1>
+
+            <tr>
+
+                <!-- Left window -->
+                <td width="23%" align="center" valign="top">
+
+                    <font size="50"><span id="inv_playerCash"></span></font><br>
+                    <button onclick="cashButtonClick()">Click for $$$</button>
+
+                </td>
+
+                <!-- Middle window -->
+                <td width="24%" align="center">
+
+                    <font size="7">IVENTORY</font><br>
+                    <br>
+                    <font size="6">
+                        <span id="inv_bldgOne"></span> bldgOne's<br>
+                        <span id="inv_bldgTwo"></span> bldgTwo's<br>
+                        <span id="inv_bldgThree"></span> bldgThree's<br>
+                        <span id="inv_bldgFour"></span> bldgFour's<br>
+                    </font>
+                    <br>
+                    <br>
+                    <font size=6>$<span id="cash_inPot"></span></font><br>
+                    <font size=5>cash in pot</font>
+                    <img src="..\assets\pot_ph.png" style="cursor:pointer" onclick="emptyPot()" draggable="false">
+
+                </td>
+
+                <!-- Right window -->
+                <td width="23%" align="center" valign="top">
+
+                    <button onclick="buy_bldgOne()">Buy Item 1</button> <button onclick="buy_bldgTwo()">Buy Item 2</button>
+                    <br>
+                    $<span id="price_bldgOne"></span> | $<span id="price_bldgTwo"></span>
+                    <br>
+                    <button onclick="buy_bldgThree()">Buy Item 3</button> <button onclick="buy_bldgFour()">Buy Item 4</button>
+                    <br>
+                    $<span id="price_bldgThree"></span> | $<span id="price_bldgFour"></span>
+
+            </tr>
+
+        </table>
+
+    </body>
+
+
+    <footer>
+
+        (c)2016 JOL Games <button onclick="devCheat()"></button>
+
+    </footer>
+
+</html>

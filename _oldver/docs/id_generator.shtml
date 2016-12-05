@@ -1,0 +1,169 @@
+<html>
+
+    <head>
+
+        <title>Computer, do the work for me!</title>
+
+    </head>
+
+    <script>
+
+        var zero="Zero"
+        var one="One"
+        var two="Two"
+        var three="Three"
+        var four="Four"
+        var five="Five"
+        var six="Six"
+        var seven="Seven"
+        var eight="Eight"
+        var nine="Nine"
+        var ten="Ten"
+        var eleven="Eleven"
+        var twelve="Twelve"
+        var thirteen="Thirteen"
+        var fourteen="Fourteen"
+        var fifteen="Fifteen"
+        var sixteen="Sixteen"
+        var seventeen="Seventeen"
+        var eighteen="Eighteen"
+
+        var countOne = one
+        var countTwo = zero
+        var countThree = one
+
+        var groupNum = 1;
+        var groupClass = 1;
+
+        function writeHeader()
+        {
+            document.write("Group number " + groupNum + " " + groupClass + "<br>")
+        }
+
+        function writeBuffer()
+        {
+            document.write("<br><br>")
+        }
+
+        function writeRow()
+        {
+            writeHeader()
+
+            countThree = one
+            groupClass = 1
+            writeGroup()
+
+            countThree = two
+            groupClass = 2
+            writeGroup()
+
+            countThree = three
+            groupClass = 3
+            writeGroup()
+
+            countThree = four
+            groupClass = 4
+            writeGroup()
+
+            countThree = five
+            groupClass = 5
+            writeGroup()
+
+            writeBuffer()
+
+            groupNum++
+        }
+
+        function writeGroup()
+        {
+
+            writeCell()
+            writeCell()
+            writeCell()
+
+        }
+
+        function writeCell()
+        {
+            countTwo = zero;
+            document.write("upg_bldg" + countOne + "_type" + countTwo + "_upg" + countThree + "<br>")
+            countTwo = one;
+            document.write("upg_bldg" + countOne + "_type" + countTwo + "_upg" + countThree + "<br>")
+            countTwo = two;
+            document.write("upg_bldg" + countOne + "_type" + countTwo + "_upg" + countThree + "<br>")
+            countTwo = three;
+            document.write("upg_bldg" + countOne + "_type" + countTwo + "_upg" + countThree + "<br>")
+        }
+
+        var timer = 2
+
+        while(timer > 1)
+        {
+            writeRow()
+            countOne = two;
+            writeRow()
+            countOne = three;
+            writeRow()
+            countOne = four;
+            writeRow()
+            countOne = five;
+            writeRow()
+            countOne = six;
+            writeRow()
+            countOne = seven;
+            writeRow()
+            countOne = eight;
+            writeRow()
+            countOne = nine;
+            writeRow()
+            countOne = ten;
+            writeRow()
+            countOne = eleven;
+            writeRow()
+            countOne = twelve;
+            writeRow()
+            countOne = thirteen;
+            writeRow()
+            countOne = fourteen;
+            writeRow()
+            countOne = fifteen;
+            writeRow()
+            countOne = sixteen;
+            writeRow()
+            countOne = seventeen;
+            writeRow()
+            countOne = eighteen;
+            writeRow()
+
+            timer = 0
+        }
+
+    </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

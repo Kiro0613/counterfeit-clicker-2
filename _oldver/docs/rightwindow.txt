@@ -1,0 +1,333 @@
+<font size="5" class="arial">
+                        
+                        <div id="buyBanner">
+                            
+                            <p>COUNTERFEIT</p>
+                            
+                            <div id="buylist">
+                            <!-- Bulding One Buy/Sell -->
+                                <span id="name_bldgOneCopy"></span><br>
+
+                                <div class="tooltipbuy">
+                                    <button class="buy" onclick="buy(id_bldgOne)">Buy</button>
+                                    <span class="tooltiptextbuy">$<span id="price_bldgOne"></span></span>
+                                </div>
+
+                                <div class="tooltipsell">
+                                    <button class="sell" onclick="sell(id_bldgOne)">Sell</button>
+                                    <span class="tooltiptextsell">$<span id="price_bldgOneSell"></span></span>
+                                </div>
+
+                                <br>
+                                <font class="arial">Makes <span id="val_bldgOne"></span> CPS</font>
+
+                            <!-- Bulding Two Buy/Sell -->
+                                <span id="name_bldgTwoCopy"></span><br>
+
+                                <div class="tooltipbuy">
+                                    <button class="buy" onclick="buy(id_bldgTwo)">Buy</button>
+                                    <span class="tooltiptextbuy">$<span id="price_bldgTwo"></span></span>
+                                </div>
+
+                                <div class="tooltipsell">
+                                    <button class="sell" onclick="sell(id_bldgTwo)">Sell</button>
+                                    <span class="tooltiptextsell">$<span id="price_bldgTwoSell"></span></span>
+                                </div>
+
+                                <br>
+                                <font class="arial">Makes <span id="val_bldgTwo"></span> CPS</font>
+
+
+                            <!-- Bulding Three Buy/Sell -->
+                                <span id="name_bldgThreeCopy"></span><br>
+
+                                <div class="tooltipbuy">
+                                    <button class="buy" onclick="buy(id_bldgThree)">Buy</button>
+                                    <span class="tooltiptextbuy">$<span id="price_bldgThree"></span></span>
+                                </div>
+
+                                <div class="tooltipsell">
+                                    <button class="sell" onclick="sell(id_bldgThree)">Sell</button>
+                                    <span class="tooltiptextsell">$<span id="price_bldgThreeSell"></span></span>
+                                </div>
+
+                                <br>
+                                <font class="arial">Makes <span id="val_bldgThree"></span> CPS</font>
+                                
+                                </div>
+                            
+                        </div>
+
+                        <br><br>
+
+                        <!-- Bulding Four Buy/Sell -->
+                            <span id="name_bldgFourCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgFour)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgFour"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgFour)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgFourSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgFour"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Five Buy/Sell -->
+                            <span id="name_bldgFiveCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgFive)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgFive"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgFive)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgFiveSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgFive"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Six Buy/Sell -->
+                            <span id="name_bldgSixCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgSix)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgSix"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgSix)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgSixSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgSix"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Seven Buy/Sell -->
+                            <span id="name_bldgSevenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgSeven)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgSeven"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgSeven)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgSevenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgSeven"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Eight Buy/Sell -->
+                            <span id="name_bldgEightCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgEight)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgEight"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgEight)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgEightSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgEight"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Nine Buy/Sell -->
+                            <span id="name_bldgNineCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgNine)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgNine"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgNine)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgNineSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgNine"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Ten Buy/Sell -->
+                            <span id="name_bldgTenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgTen)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgTen"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgTen)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgTenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgTen"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Eleven Buy/Sell -->
+                            <span id="name_bldgElevenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgEleven)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgEleven"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgEleven)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgElevenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgEleven"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Twelve Buy/Sell -->
+                            <span id="name_bldgTwelveCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgTwelve)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgTwelve"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgTwelve)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgTwelveSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgTwelve"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Thirteen Buy/Sell -->
+                            <span id="name_bldgThirteenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgThirteen)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgThirteen"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgThirteen)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgThirteenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgThirteen"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Fourteen Buy/Sell -->
+                            <span id="name_bldgFourteenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgFourteen)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgFourteen"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgFourteen)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgFourteenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgFourteen"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Fifteen Buy/Sell -->
+                            <span id="name_bldgFifteenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgFifteen)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgFifteen"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgFifteen)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgFifteenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgFifteen"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Sixteen Buy/Sell -->
+                            <span id="name_bldgSixteenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgSixteen)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgSixteen"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgSixteen)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgSixteenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgSixteen"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Seventeen Buy/Sell -->
+                            <span id="name_bldgSeventeenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgSeventeen)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgSeventeen"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgSeventeen)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgSeventeenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgSeventeen"></span> CPS</font>
+
+                        <br><br>
+
+                        <!-- Bulding Eighteen Buy/Sell -->
+                            <span id="name_bldgEighteenCopy"></span><br>
+
+                            <div class="tooltipbuy">
+                                <button class="buy" onclick="buy(id_bldgEighteen)">Buy</button>
+                                <span class="tooltiptextbuy">$<span id="price_bldgEighteen"></span></span>
+                            </div>
+
+                            <div class="tooltipsell">
+                                <button class="sell" onclick="sell(id_bldgEighteen)">Sell</button>
+                                <span class="tooltiptextsell">$<span id="price_bldgEighteenSell"></span></span>
+                            </div>
+
+                            <br>
+                            <font class="arial">Makes <span id="val_bldgEighteen"></span> CPS</font>
+
+                        <br><br>
+
+                    </font>

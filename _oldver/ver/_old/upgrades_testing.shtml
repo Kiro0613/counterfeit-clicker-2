@@ -1,0 +1,69 @@
+<html>
+
+    <head>
+        <title>Arguments Testing</title>
+    </head>
+
+
+    <script>
+
+        var stringOne = "String 1 Text"
+        var style_stringOne = "stringOne"
+
+        var stringTwo = "String 2 Text"
+        var style_stringTwo = "stringTwo"
+
+        var upgOneA = "red"
+        var upgOneB = "orange"
+        var upgOneC = "yellow"
+        var upgOneD = "green"
+        var upgOneE = "blue"
+        var upgOneF = "purple"
+        var upgOne = upgOneA
+        var upgOneNext = upgOneB
+
+        var typeOne = "fontFamily"
+
+        var upgOneCounter = 4
+        var upgOneCounterRem
+
+        var style
+        var upg
+        var newUpg
+        var button
+
+
+        function onload()
+        {
+            document.getElementById("stringOne").innerHTML = stringOne;
+            document.getElementById("stringTwo").innerHTML = stringTwo;
+        }
+
+        function changeColor(stringId, upgrade, nextUpg)
+        {
+            style = document.getElementById(stringId);
+            upg = upgrade;
+            style.style.color = upg;
+
+            button = document.getElementById("upgradeButton");
+            button.setAttribute("onclick", "changeColor(style_stringOne, " + nextUpg + ")")
+
+        }
+
+
+    </script>
+
+
+    <body onload="onload()">
+
+        <span id="stringOne"></span><br>
+        <button id="upgradeButton" onclick="changeColor(style_stringOne, upgOneNext)">Change Color</button>
+        <br>
+        <br>
+        <span id="stringTwo"></span><br>
+        <button onclick="changeFont(style_stringTwo, upgTwo)">Turn String 2 Red</button>
+        <button onclick="changeColor(style_stringTwo, upgOne)">Turn String 2 Blue</button>
+
+    </body>
+
+</html>

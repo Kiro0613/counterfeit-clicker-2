@@ -1,0 +1,388 @@
+<html>
+
+    <!-- Project started: 8/18/2016 -->
+
+    <head>
+
+        <title>Counterfeit Clicker 2!!</title>
+        <link rel="stylesheet" type="text/css" href="css_formatting.css">
+
+    </head>
+
+    <!-- JavaScript starts here -->
+
+        <script src="js_B6.js"></script>
+
+    <!-- JavaScript Ends Here -->
+
+    <body class="window" onload="updateScreenSize()" onresize="updateScreenSize()">
+
+        <div class="left">
+
+            <!-- Left window -->
+
+            <font size="7" class="arial"><span id="inv_playerCash"></span></font>
+            <br>
+            <button class="counterfeit" onclick="cashButtonClick()">COUNTERFEIT</button>
+            <br><br>
+            <font size="7" class="arial"><span id="cash_perSec"></span></font>
+            <br>
+            <font size="5" class="arial">cash per second</font>
+
+        </div>
+
+        <!-- Middle window -->
+        <div class="middle">
+
+            <div class="middlemenu">
+
+                <div class="store">
+
+                    <div class="menuheader">STORE</div>
+
+                    <!-- Counterfeit + Gambling -->
+                    <div class="storerow">
+
+                        <!-- Counterfeit -->
+                        <div class="storecell">
+
+                            <p style="font-size:2em;">COUNTERFEIT</p>
+                            <br>
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgOne)">Buy: $<span id="price_bldgOne"></span></button>
+                                <span id="name_bldgOneCopy"></span>
+                                <button class="button" onclick="sell(id_bldgOne)">Sell: $<span id="price_bldgOneSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgTwo)">Buy: $<span id="price_bldgTwo"></span></button>
+                                <span id="name_bldgTwoCopy"></span>
+                                <button class="button" onclick="sell(id_bldgTwo)">Sell: $<span id="price_bldgTwoSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="buy" onclick="buy(id_bldgThree)">Buy: $<span id="price_bldgThree"></span></button>
+                                <span id="name_bldgThreeCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgThree)">Sell: $<span id="price_bldgThreeSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Gambling -->
+                        <div class="storecell">
+
+                            <p style="font-size:2em;">GAMBLING</p>
+                            <br>
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgFour)">Buy: $<span id="price_bldgFour"></span></button>
+                                <span id="name_bldgFourCopy"></span>
+                                <button class="button" onclick="sell(id_bldgFour)">Sell: $<span id="price_bldgFourSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgFive)">Buy: $<span id="price_bldgFive"></span></button>
+                                <span id="name_bldgFiveCopy"></span>
+                                <button class="button" onclick="sell(id_bldgFive)">Sell: $<span id="price_bldgFiveSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="buy" onclick="buy(id_bldgSix)">Buy: $<span id="price_bldgSix"></span></button>
+                                <span id="name_bldgSixCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgSix)">Sell: $<span id="price_bldgSixSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Digital + Drugs -->
+                    <div class="storerow">
+
+                        <!-- Digital -->
+                        <div class="storecell">
+
+                            <p style="font-size:2em;">GAMBLING</p>
+                            <br>
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgSeven)">Buy: $<span id="price_bldgSeven"></span></button>
+                                <span id="name_bldgSevenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgSeven)">Sell: $<span id="price_bldgSevenSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgEight)">Buy: $<span id="price_bldgEight"></span></button>
+                                <span id="name_bldgEightCopy"></span>
+                                <button class="button" onclick="sell(id_bldgEight)">Sell: $<span id="price_bldgEightSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="buy" onclick="buy(id_bldgNine)">Buy: $<span id="price_bldgNine"></span></button>
+                                <span id="name_bldgNineCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgNine)">Sell: $<span id="price_bldgNineSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Drugs -->
+                        <div class="storecell">
+
+                            <p style="font-size:2em;">GAMBLING</p>
+                            <br>
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgTen)">Buy: $<span id="price_bldgTen"></span></button>
+                                <span id="name_bldgTenCopy"></span>:
+                                <button class="button" onclick="sell(id_bldgTen)">Sell: $<span id="price_bldgTenSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgEleven)">Buy: $<span id="price_bldgEleven"></span></button>
+                                <span id="name_bldgElevenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgEleven)">Sell: $<span id="price_bldgElevenSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="buy" onclick="buy(id_bldgTwelve)">Buy: $<span id="price_bldgTwelve"></span></button>
+                                <span id="name_bldgTwelveCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgTwelve)">Sell: $<span id="price_bldgTwelveSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Stealing + Professionals -->
+                    <div class="storerow">
+
+                        <!-- Stealing -->
+                        <div class="storecell">
+
+                            <p style="font-size:2em;">COUNTERFEIT</p>
+                            <br>
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgThirteen)">Buy: $<span id="price_bldgThirteen"></span></button>
+                                <span id="name_bldgThirteenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgThirteen)">Sell: $<span id="price_bldgThirteenSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgFourteen)">Buy: $<span id="price_bldgFourteen"></span></button>
+                                <span id="name_bldgFourteenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgFourteen)">Sell: $<span id="price_bldgFourteenSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="buy" onclick="buy(id_bldgFifteen)">Buy: $<span id="price_bldgFifteen"></span></button>
+                                <span id="name_bldgFifteenCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgFifteen)">Sell: $<span id="price_bldgFifteenSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Professionals -->
+                        <div class="storecell">
+
+                            <p style="font-size:2em;">GAMBLING</p>
+                            <br>
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgSixteen)">Buy: $<span id="price_bldgSixteen"></span></button>
+                                <span id="name_bldgSixteenCopy"></span>:
+                                <button class="button" onclick="sell(id_bldgSixteen)">Sell: $<span id="price_bldgSixteenSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="button" onclick="buy(id_bldgSeventeen)">Buy: $<span id="price_bldgSeventeen"></span></button>
+                                <span id="name_bldgSeventeenCopy"></span>
+                                <button class="button" onclick="sell(id_bldgSeventeen)">Sell: $<span id="price_bldgSeventeenSell"></span></button>
+
+                            </div>
+
+                            <br>
+
+                            <div class="storecellcontents">
+
+                                <button class="buy" onclick="buy(id_bldgEighteen)">Buy: $<span id="price_bldgEighteen"></span></button>
+                                <span id="name_bldgEighteenCopy"></span>
+                                <button class="sell" onclick="sell(id_bldgEighteen)">Sell: $<span id="price_bldgEighteenSell"></span></button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="inv">
+
+                    <p>INVENTORY</p>
+
+
+                    <font size="7">
+
+                        <span id="inv_bldgOne"></span>
+                        <div class="tooltipbig"><span id="name_bldgOne"></span>s<span class="tooltiptextbig"><span id="cash_bldgOneAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgTwo"></span>
+                        <div class="tooltipbig"><span id="name_bldgTwo"></span>s<span class="tooltiptextbig"><span id="cash_bldgTwoAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgThree"></span>
+                        <div class="tooltipbig"><span id="name_bldgThree"></span>s<span class="tooltiptextbig"><span id="cash_bldgThreeAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgFour"></span>
+                        <div class="tooltipbig"><span id="name_bldgFour"></span>s<span class="tooltiptextbig"><span id="cash_bldgFourAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgFive"></span>
+                        <div class="tooltipbig"><span id="name_bldgFive"></span>s<span class="tooltiptextbig"><span id="cash_bldgFiveAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgSix"></span>
+                        <div class="tooltipbig"><span id="name_bldgSix"></span>s<span class="tooltiptextbig"><span id="cash_bldgSixAdd"></span>CPS</span></div>
+
+                        <br>
+
+                         <span id="inv_bldgSeven"></span>
+                        <div class="tooltipbig"><span id="name_bldgSeven"></span>s<span class="tooltiptextbig"><span id="cash_bldgSevenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgEight"></span>
+                        <div class="tooltipbig"><span id="name_bldgEight"></span>s<span class="tooltiptextbig"><span id="cash_bldgEightAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgNine"></span>
+                        <div class="tooltipbig"><span id="name_bldgNine"></span>s<span class="tooltiptextbig"><span id="cash_bldgNineAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgTen"></span>
+                        <div class="tooltipbig"><span id="name_bldgTen"></span>s<span class="tooltiptextbig"><span id="cash_bldgTenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgEleven"></span>
+                        <div class="tooltipbig"><span id="name_bldgEleven"></span>s<span class="tooltiptextbig"><span id="cash_bldgElevenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgTwelve"></span>
+                        <div class="tooltipbig"><span id="name_bldgTwelve"></span>s<span class="tooltiptextbig"><span id="cash_bldgTwelveAdd"></span>CPS</span></div>
+
+                        <br>
+
+                         <span id="inv_bldgThirteen"></span>
+                        <div class="tooltipbig"><span id="name_bldgThirteen"></span>s<span class="tooltiptextbig"><span id="cash_bldgThirteenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgFourteen"></span>
+                        <div class="tooltipbig"><span id="name_bldgFourteen"></span>s<span class="tooltiptextbig"><span id="cash_bldgFourteenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgFifteen"></span>
+                        <div class="tooltipbig"><span id="name_bldgFifteen"></span>s<span class="tooltiptextbig"><span id="cash_bldgFifteenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgSixteen"></span>
+                        <div class="tooltipbig"><span id="name_bldgSixteen"></span>s<span class="tooltiptextbig"><span id="cash_bldgSixteenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgSeventeen"></span>
+                        <div class="tooltipbig"><span id="name_bldgSeventeen"></span>s<span class="tooltiptextbig"><span id="cash_bldgSeventeenAdd"></span>CPS</span></div>
+
+                        <br>
+
+                        <span id="inv_bldgEighteen"></span>
+                        <div class="tooltipbig"><span id="name_bldgEighteen"></span>s<span class="tooltiptextbig"><span id="cash_bldgEighteenAdd"></span>CPS</span></div>
+
+                        <br><br>
+
+                    </font>
+
+
+                    (c)2016 JOL Games <button onclick="devCheat()">devCheat()</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="right">
+
+            <!-- Right window -->
+
+            UPGRADES
+
+        </div>
+
+    </body>
+
+</html>

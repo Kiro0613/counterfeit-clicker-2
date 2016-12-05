@@ -1,0 +1,3 @@
+document.getElementById("upgList_bldgOne").className = "leftcolumn";
+document.getElementById("upgList_bldgTwo").className = "middlecolumn";
+document.getElementById("upgList_bldgThree").className = "rightcolumn";

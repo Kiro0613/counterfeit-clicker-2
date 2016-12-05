@@ -1,0 +1,452 @@
+<html>
+
+    <!-- Project started: 8/18/2016 -->
+
+    <head>
+
+        <title>Counterfeit Clicker 2!!</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+
+    </head>
+
+    <!-- JavaScript starts here -->
+    <script>
+
+        //Cash Money vars
+        var cash_addOnClick = 1;
+        var cash_inPot = 0;
+
+
+        //Player Inv vars
+        var inv_playerCash = 0;
+
+        var inv_bldgOne = 0;
+        var inv_bldgTwo = 0;
+        var inv_bldgThree = 0;
+        var inv_bldgFour = 0;
+
+
+        //Building Name variables
+        var name_bldgOne = "name_bldgOne"
+        var name_bldgTwo = "name_bldgTwo"
+        var name_bldgThree = "name_bldgThree"
+        var name_bldgFour = "name_bldgFour"
+
+
+        //Bulding Price vars
+        var price_bldgOne = 10;
+        var price_bldgTwo = 20;
+        var price_bldgThree = 30;
+        var price_bldgFour = 40;
+
+        //Building Sell Value vars
+        var price_bldgOneSell = 100;
+        var price_bldgTwoSell = 200;
+        var price_bldgThreeSell = 300;
+        var price_bldgFourSell = 400;
+
+
+        //Building Value vars
+        var val_bldgOne = 1;
+        var val_bldgTwo = 2;
+        var val_bldgThree = 3;
+        var val_bldgFour = 4;
+
+
+
+        //Adding cash vars
+        var cash_perSec
+
+        var cash_bldgOneAdd = 0;
+        var cash_bldgTwoAdd = 0;
+        var cash_bldgThreeAdd = 0;
+        var cash_bldgFourAdd = 0;
+
+
+        //Other vars
+
+
+        //Cash adding fncts
+        function cashButtonClick()
+        {
+            inv_playerCash += cash_addOnClick;
+        }
+
+
+        setInterval(
+        function()
+        {
+            inv_playerCash += cash_perSec;
+            scrnHeight = window.innerHeight;
+            scrnWidth = window.innerWidth;
+        }
+        , 1000)
+
+
+
+        //Buying fncts
+        function buy_bldgOne()
+        {
+            if(inv_playerCash >= price_bldgOne)
+            {
+                inv_playerCash = inv_playerCash - price_bldgOne
+                inv_bldgOne++
+            }
+        }
+
+        function buy_bldgTwo()
+        {
+             if(inv_playerCash >= price_bldgTwo)
+             {
+                 inv_playerCash = inv_playerCash - price_bldgTwo
+                 inv_bldgTwo++
+             }
+        }
+
+        function buy_bldgThree()
+        {
+            if(inv_playerCash >= price_bldgThree)
+             {
+                 inv_playerCash = inv_playerCash - price_bldgThree
+                 inv_bldgThree++
+             }
+        }
+
+        function buy_bldgFour()
+        {
+            if(inv_playerCash >= price_bldgFour)
+            {
+                inv_playerCash = inv_playerCash - price_bldgFour
+                inv_bldgFour++
+            }
+        }
+
+        //Selling Fncts
+        function sell_bldgOne()
+        {
+            if(inv_bldgOne > 0)
+            {
+                inv_playerCash += price_bldgOneSell
+                inv_bldgOne--
+            }
+        }
+
+        function sell_bldgTwo()
+        {
+            if(inv_bldgTwo > 0)
+            {
+                inv_playerCash += price_bldgTwoSell
+                inv_bldgTwo--
+            }
+        }
+
+        function sell_bldgThree()
+        {
+            if(inv_bldgThree > 0)
+            {
+                inv_playerCash += price_bldgThreeSell
+                inv_bldgThree--
+            }
+        }
+
+        function sell_bldgFour()
+        {
+            if(inv_bldgFour > 0)
+            {
+                inv_playerCash += price_bldgFourSell
+                inv_bldgFour--
+            }
+        }
+
+
+        //VAR UPDATES
+        setInterval(
+        function updateVar()
+            {
+                document.getElementById("inv_playerCash").innerHTML = inv_playerCash;
+
+                document.getElementById("inv_bldgOne").innerHTML = inv_bldgOne;
+                document.getElementById("inv_bldgTwo").innerHTML = inv_bldgTwo;
+                document.getElementById("inv_bldgThree").innerHTML = inv_bldgThree;
+                document.getElementById("inv_bldgFour").innerHTML = inv_bldgFour;
+
+                document.getElementById("price_bldgOne").innerHTML = price_bldgOne;
+                document.getElementById("price_bldgTwo").innerHTML = price_bldgTwo;
+                document.getElementById("price_bldgThree").innerHTML = price_bldgThree;
+                document.getElementById("price_bldgFour").innerHTML = price_bldgFour;
+
+                document.getElementById("price_bldgOneSell").innerHTML = price_bldgOneSell;
+                document.getElementById("price_bldgTwoSell").innerHTML = price_bldgTwoSell;
+                document.getElementById("price_bldgThreeSell").innerHTML = price_bldgThreeSell;
+                document.getElementById("price_bldgFourSell").innerHTML = price_bldgFourSell;
+
+                document.getElementById("name_bldgOne").innerHTML = name_bldgOne;
+                document.getElementById("name_bldgTwo").innerHTML = name_bldgTwo;
+                document.getElementById("name_bldgThree").innerHTML = name_bldgThree;
+                document.getElementById("name_bldgFour").innerHTML = name_bldgFour;
+
+                document.getElementById("name_bldgOneCopy").innerHTML = name_bldgOne;
+                document.getElementById("name_bldgTwoCopy").innerHTML = name_bldgTwo;
+                document.getElementById("name_bldgThreeCopy").innerHTML = name_bldgThree;
+                document.getElementById("name_bldgFourCopy").innerHTML = name_bldgFour;
+
+                document.getElementById("val_bldgOne").innerHTML = val_bldgOne;
+                document.getElementById("val_bldgTwo").innerHTML = val_bldgTwo;
+                document.getElementById("val_bldgThree").innerHTML = val_bldgThree;
+                document.getElementById("val_bldgFour").innerHTML = val_bldgFour;
+
+                document.getElementById("cash_bldgOneAdd").innerHTML = cash_bldgOneAdd;
+                document.getElementById("cash_bldgTwoAdd").innerHTML = cash_bldgTwoAdd;
+                document.getElementById("cash_bldgThreeAdd").innerHTML = cash_bldgThreeAdd;
+                document.getElementById("cash_bldgFourAdd").innerHTML = cash_bldgFourAdd;
+
+                document.getElementById("cash_perSec").innerHTML = cash_perSec;
+
+                cash_bldgOneAdd = val_bldgOne * inv_bldgOne;
+                cash_bldgTwoAdd = val_bldgTwo * inv_bldgTwo;
+                cash_bldgThreeAdd = val_bldgThree * inv_bldgThree;
+                cash_bldgFourAdd = val_bldgFour * inv_bldgFour;
+                cash_perSec = cash_bldgOneAdd + cash_bldgTwoAdd + cash_bldgThreeAdd + cash_bldgFourAdd;
+
+                price_bldgOneSell = price_bldgOne - (price_bldgOne/8)
+                price_bldgTwoSell = price_bldgTwo - (price_bldgTwo/8)
+                price_bldgThreeSell = price_bldgThree - (price_bldgThree/8)
+                price_bldgFourSell = price_bldgFour - (price_bldgFour/8)
+            }
+        , 10)
+
+
+        //SCREEN UPDATER
+        function updateScreenSize()
+        {
+            var screenHeight = window.innerHeight;
+            var screenWidth = window.innerWidth;
+
+            var elem_overflow = document.getElementById("overflow");
+            elem_overflow.style.overflow = "hidden";
+            elem_overflow.style.overflowY = "scroll";
+            elem_overflow.style.height = window.innerHeight - 26;
+        }
+
+
+        function devCheat()
+        {
+            inv_playerCash += 99999999
+        }
+
+    </script>
+    <!-- JavaScript Ends Here -->
+
+
+    <body onload="updateScreenSize()">
+
+        <table align="center" border="1" class="table" height="100%" width="100%">
+
+            <!-- Left window -->
+            <td width="23%" align="center" valign="top">
+
+
+
+                <font size="7" class="arial"><span id="inv_playerCash"></span></font>
+                <br>
+                <button class="counterfeit" onclick="cashButtonClick()">COUNTERFEIT</button>
+                <br><br>
+                <font size="7" class="arial"><span id="cash_perSec"></span></font>
+                <br>
+                <font size="5" class="arial">cash per second</font>
+
+            </td>
+
+            <td class="arial" width="24%" align="center">
+
+                <!-- Middle window -->
+
+                <div id="overflow">
+
+                    <table border="1">
+
+                        <tr>
+
+                            <th height="50%" width="24%" valign="top" align="center">
+
+                                <font class="inventory">INVENTORY<br><br></font>
+
+                            </th>
+
+                        </tr>
+
+                        <tr>
+
+                            <td align="center">
+
+                                <font size="7">
+
+                                    <span id="inv_bldgOne"></span>
+
+                                    <div class="tooltipbig">
+                                        <span id="name_bldgOne"></span>'s <span class="tooltiptextbig"><span id="cash_bldgOneAdd"></span>CPS</span>
+                                    </div>
+
+                                    <br>
+
+
+                                    <span id="inv_bldgTwo"></span>
+
+                                    <div class="tooltipbig">
+                                        <span id="name_bldgTwo"></span>'s <span class="tooltiptextbig"><span id="cash_bldgTwoAdd"></span>CPS</span>
+                                    </div>
+
+                                    <br>
+
+                                    <span id="inv_bldgThree"></span>
+
+                                    <div class="tooltipbig">
+                                        <span id="name_bldgThree"></span>'s <span class="tooltiptextbig"><span id="cash_bldgThreeAdd"></span>CPS</span>
+                                    </div>
+
+                                    <br>
+
+                                    <span id="inv_bldgFour"></span>
+
+                                    <div class="tooltipbig">
+                                        <span id="name_bldgFour"></span>'s <span class="tooltiptextbig"><span id="cash_bldgFourAdd"></span>CPS</span>
+                                    </div>
+
+                                    <br><br>
+
+                                </font>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+
+                            <td class="arialbig" align="center">
+
+                                <p>
+
+                                    WHOOO UPGRADES N STUFF<br>
+                                    Unfortunately, I haven't coded it yet though
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+                                    <br>junk text
+
+                                </p>
+
+                            </td>
+
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                (c)2016 JOL Games <button onclick="devCheat()">devCheat()</button>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </td>
+
+            <!-- Right window -->
+            <td width="18%" align="center" valign="top">
+
+                <font size="5" class="arial">
+
+                    <!-- Bulding One Buy/Sell -->
+                        <span id="name_bldgOneCopy"></span>
+                        <br>
+                        <div class="tooltipbuy">
+                            <button class="buy" onclick="buy_bldgOne()">Buy</button>
+                            <span class="tooltiptextbuy">$<span id="price_bldgOne"></span></span>
+                        </div>
+
+                        <div class="tooltipsell">
+                            <button class="sell" onclick="sell_bldgOne()">Sell</button>
+                            <span class="tooltiptextsell">$<span id="price_bldgOneSell"></span></span>
+                        </div>
+
+                        <br>
+                        <font class="arial">Makes <span id="val_bldgOne"></span> CPS</font>
+
+                    <br><br>
+
+                    <!-- Bulding Two Buy/Sell -->
+                        <span id="name_bldgTwoCopy"></span>
+                        <br>
+                        <div class="tooltipbuy">
+                            <button class="buy" onclick="buy_bldgTwo()">Buy</button>
+                            <span class="tooltiptextbuy">$<span id="price_bldgTwo"></span></span>
+                        </div>
+
+                        <div class="tooltipsell">
+                            <button class="sell" onclick="sell_bldgTwo()">Sell</button>
+                            <span class="tooltiptextsell">$<span id="price_bldgTwoSell"></span></span>
+                        </div>
+
+                        <br>
+                        <font class="arial">Makes <span id="val_bldgTwo"></span> CPS</font>
+
+                    <br><br>
+
+                    <!-- Bulding Three Buy/Sell -->
+                        <span id="name_bldgThreeCopy"></span>
+                        <br>
+                        <div class="tooltipbuy">
+                            <button class="buy" onclick="buy_bldgThree()">Buy</button>
+                            <span class="tooltiptextbuy">$<span id="price_bldgThree"></span></span>
+                        </div>
+
+                        <div class="tooltipsell">
+                            <button class="sell" onclick="sell_bldgThree()">Sell</button>
+                            <span class="tooltiptextsell">$<span id="price_bldgThreeSell"></span></span>
+                        </div>
+
+                        <br>
+                        <font class="arial">Makes <span id="val_bldgThree"></span> CPS</font>
+
+                    <br><br>
+
+                    <!-- Bulding Four Buy/Sell -->
+                        <span id="name_bldgFourCopy"></span>
+                        <br>
+                        <div class="tooltipbuy">
+                            <button class="buy" onclick="buy_bldgFour()">Buy</button>
+                            <span class="tooltiptextbuy">$<span id="price_bldgFour"></span></span>
+                        </div>
+
+                        <div class="tooltipsell">
+                            <button class="sell" onclick="sell_bldgFour()">Sell</button>
+                            <span class="tooltiptextsell">$<span id="price_bldgFourSell"></span></span>
+                        </div>
+
+                        <br>
+                        <font class="arial">Makes <span id="val_bldgFour"></span> CPS</font>
+
+                </font>
+
+            </td>
+
+        </table>
+
+    </body>
+
+</html>

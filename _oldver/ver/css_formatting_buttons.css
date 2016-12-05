@@ -1,0 +1,70 @@
+.counterfeit
+{
+    border-radius: 12px;
+    font-family: Arial;
+    outline: none;
+    color: #000000;
+    font-size: 40px;
+    background: #f0f0f0;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.counterfeit:hover
+{
+    background: #ababab;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.counterfeit:active
+{
+    background: #9c9c9c;
+    text-decoration: none;
+}
+
+/*Disables/Enables Upgrades*/
+.upgradedisabled
+{
+    background-color: crimson;
+}
+
+.upgradeenabled
+{
+    background-color: darkgreen;
+}
+
+.unlockedrow
+{
+    display: inline-flex;
+    visibility: visible;
+}
+
+
+/*Big Tooltips*/
+.tooltipbig
+{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipbig .tooltiptextbig
+{
+    visibility: hidden;
+    width: auto;
+    font-size: 25px;
+    background-color: #dddddd;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 15px 10px 15px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltipbig:hover .tooltiptextbig
+{
+    visibility: visible;
+}

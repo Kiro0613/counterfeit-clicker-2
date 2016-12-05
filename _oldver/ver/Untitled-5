@@ -1,0 +1,71 @@
+document.getElementById("inv_bldgOne_A").className = "unlockedupg"
+document.getElementById("inv_bldgOne_B").className = "unlockedupg"
+document.getElementById("inv_bldgOne_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgTwo_A").className = "unlockedupg"
+document.getElementById("inv_bldgTwo_B").className = "unlockedupg"
+document.getElementById("inv_bldgTwo_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgThree_A").className = "unlockedupg"
+document.getElementById("inv_bldgThree_B").className = "unlockedupg"
+document.getElementById("inv_bldgThree_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgFour_A").className = "unlockedupg"
+document.getElementById("inv_bldgFour_B").className = "unlockedupg"
+document.getElementById("inv_bldgFour_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgFive_A").className = "unlockedupg"
+document.getElementById("inv_bldgFive_B").className = "unlockedupg"
+document.getElementById("inv_bldgFive_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgSix_A").className = "unlockedupg"
+document.getElementById("inv_bldgSix_B").className = "unlockedupg"
+document.getElementById("inv_bldgSix_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgSeven_A").className = "unlockedupg"
+document.getElementById("inv_bldgSeven_B").className = "unlockedupg"
+document.getElementById("inv_bldgSeven_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgEight_A").className = "unlockedupg"
+document.getElementById("inv_bldgEight_B").className = "unlockedupg"
+document.getElementById("inv_bldgEight_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgNine_A").className = "unlockedupg"
+document.getElementById("inv_bldgNine_B").className = "unlockedupg"
+document.getElementById("inv_bldgNine_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgTen_A").className = "unlockedupg"
+document.getElementById("inv_bldgTen_B").className = "unlockedupg"
+document.getElementById("inv_bldgTen_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgEleven_A").className = "unlockedupg"
+document.getElementById("inv_bldgEleven_B").className = "unlockedupg"
+document.getElementById("inv_bldgEleven_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgTwelve_A").className = "unlockedupg"
+document.getElementById("inv_bldgTwelve_B").className = "unlockedupg"
+document.getElementById("inv_bldgTwelve_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgThirteen_A").className = "unlockedupg"
+document.getElementById("inv_bldgThirteen_B").className = "unlockedupg"
+document.getElementById("inv_bldgThirteen_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgFourteen_A").className = "unlockedupg"
+document.getElementById("inv_bldgFourteen_B").className = "unlockedupg"
+document.getElementById("inv_bldgFourteen_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgFifteen_A").className = "unlockedupg"
+document.getElementById("inv_bldgFifteen_B").className = "unlockedupg"
+document.getElementById("inv_bldgFifteen_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgSixteen_A").className = "unlockedupg"
+document.getElementById("inv_bldgSixteen_B").className = "unlockedupg"
+document.getElementById("inv_bldgSixteen_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgSeventeen_A").className = "unlockedupg"
+document.getElementById("inv_bldgSeventeen_B").className = "unlockedupg"
+document.getElementById("inv_bldgSeventeen_C").className = "unlockedupg"
+
+document.getElementById("inv_bldgEighteen_A").className = "unlockedupg"
+document.getElementById("inv_bldgEighteen_B").className = "unlockedupg"
+document.getElementById("inv_bldgEighteen_C").className = "unlockedupg"

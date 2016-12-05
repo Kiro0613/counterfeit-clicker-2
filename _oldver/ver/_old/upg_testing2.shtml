@@ -1,0 +1,92 @@
+<html>
+
+    <head>
+
+        <title>Upgrade Testing 2</title>
+
+    </head>
+
+
+    <script>
+
+        var upgradeCounter = 0;
+        var upgradeCounterNext = 1
+        var upgradeDisplay = upgradeCounter.toString();
+
+        var upgradeCounterTwo = 0;
+        var upgradeCounterNextTwo = 1
+        var upgradeDisplayTwo = upgradeCounterTwo.toString()
+
+        var stringId
+        var upgCounter
+        var upgCounterNext
+        var upgDisplay
+        var stringNumTwo
+
+        var typeOne = 1;
+        var typeTwo = 2;
+        var type;
+
+        function loadCounter()
+        {
+            document.getElementById("upgradeDisplayId").innerHTML = upgradeDisplay;
+            document.getElementById("upgradeDisplayIdTwo").innerHTML = upgradeDisplayTwo;
+        }
+
+        function updateVar()
+        {
+            upgradeCounter = upgradeCounterNext
+            upgradeCounterNext = upgradeCounter + 1
+            upgradeDisplay = upgradeCounter.toString()
+        }
+
+        function updateVarTwo()
+        {
+            upgradeCounterTwo = upgradeCounterNextTwo
+            upgradeCounterNextTwo = upgradeCounterTwo + 1
+            upgradeDisplayTwo = upgradeCounterTwo.toString()
+        }
+
+        function upgrade(upgCounterArg, upgCounterNextArg, upgDisplayArg, stringIdArg, typeArg)
+        {
+            stringId = stringIdArg;
+            upgCounter = upgCounterArg;
+            upgCounterNext = upgCounterNextArg;
+            upgDisplay = upgDisplayArg;
+            type = typeArg;
+
+            if((type == 1))
+            {
+                updateVar()
+            }
+            else
+            {
+                updateVarTwo()
+            }
+
+            document.getElementById(stringId).innerHTML = upgDisplay;
+        }
+
+    </script>
+
+
+    <body onload="loadCounter()">
+
+        <button id="upgButton" onclick="upgrade(
+        upgradeCounter, upgradeCounterNext, upgradeDisplay,
+        &quot;upgradeDisplayId&quot;, typeOne)">Click to upgrade number 1</button><br>
+        <span id="upgradeDisplayId"></span><br>
+        <br>
+        <button id="upgButtonTwo" onclick="upgrade(
+        upgradeCounterTwo, upgradeCounterNextTwo, upgradeDisplayTwo,
+        &quot;upgradeDisplayIdTwo&quot;, typeTwo)">Click to upgrade number 2</button><br>
+        <span id="upgradeDisplayIdTwo"></span>
+
+    </body>
+
+
+    <footer>
+
+    </footer>
+
+</html>

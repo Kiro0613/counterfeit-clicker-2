@@ -1,0 +1,252 @@
+document.getElementById("upgList_bldgZero").className = "leftcolumn";
+document.getElementById("upgList_bldgOne").className = "leftcolumn";
+document.getElementById("upgList_bldgTwo").className = "middlecolumn";
+document.getElementById("upgList_bldgThree").className = "rightcolumn";
+document.getElementById("upgList_bldgFour").className = "leftcolumn";
+document.getElementById("upgList_bldgFive").className = "middlecolumn";
+document.getElementById("upgList_bldgSix").className = "rightcolumn";
+document.getElementById("upgList_bldgSeven").className = "leftcolumn";
+document.getElementById("upgList_bldgEight").className = "middlecolumn";
+document.getElementById("upgList_bldgNine").className = "rightcolumn";
+document.getElementById("upgList_bldgTen").className = "leftcolumn";
+document.getElementById("upgList_bldgEleven").className = "middlecolumn";
+document.getElementById("upgList_bldgTwelve").className = "rightcolumn";
+document.getElementById("upgList_bldgThirteen").className = "leftcolumn";
+document.getElementById("upgList_bldgFourteen").className = "middlecolumn";
+document.getElementById("upgList_bldgFifteen").className = "rightcolumn";
+document.getElementById("upgList_bldgSixteen").className = "leftcolumn";
+document.getElementById("upgList_bldgSeventeen").className = "middlecolumn";
+document.getElementById("upgList_bldgEighteen").className = "rightcolumn";
+document.getElementById("upgList_bldgNineteen").className = "leftcolumn";
+
+
+document.getElementById("upg_bldgZero_A").className = "upgrade"
+document.getElementById("upg_bldgZero_B").className = "upgrade"
+document.getElementById("upg_bldgZero_C").className = "upgrade"
+document.getElementById("upg_bldgZero_D").className = "upgrade"
+document.getElementById("upg_bldgZero_E").className = "upgrade"
+document.getElementById("upg_bldgZero_F").className = "upgrade"
+document.getElementById("upg_bldgZero_G").className = "upgrade"
+document.getElementById("upg_bldgZero_H").className = "upgrade"
+document.getElementById("upg_bldgZero_I").className = "upgrade"
+
+
+document.getElementById("upg_bldgOne_A").className = "upgrade"
+document.getElementById("upg_bldgOne_B").className = "upgrade"
+document.getElementById("upg_bldgOne_C").className = "upgrade"
+document.getElementById("upg_bldgOne_D").className = "upgrade"
+document.getElementById("upg_bldgOne_E").className = "upgrade"
+document.getElementById("upg_bldgOne_F").className = "upgrade"
+document.getElementById("upg_bldgOne_G").className = "upgrade"
+document.getElementById("upg_bldgOne_H").className = "upgrade"
+document.getElementById("upg_bldgOne_I").className = "upgrade"
+
+
+document.getElementById("upg_bldgTwo_A").className = "upgrade"
+document.getElementById("upg_bldgTwo_B").className = "upgrade"
+document.getElementById("upg_bldgTwo_C").className = "upgrade"
+document.getElementById("upg_bldgTwo_D").className = "upgrade"
+document.getElementById("upg_bldgTwo_E").className = "upgrade"
+document.getElementById("upg_bldgTwo_F").className = "upgrade"
+document.getElementById("upg_bldgTwo_G").className = "upgrade"
+document.getElementById("upg_bldgTwo_H").className = "upgrade"
+document.getElementById("upg_bldgTwo_I").className = "upgrade"
+document.getElementById("upg_bldgTwo_J").className = "upgrade"
+document.getElementById("upg_bldgTwo_K").className = "upgrade"
+document.getElementById("upg_bldgTwo_L").className = "upgrade"
+document.getElementById("upg_bldgTwo_M").className = "upgrade"
+document.getElementById("upg_bldgTwo_N").className = "upgrade"
+document.getElementById("upg_bldgTwo_O").className = "upgrade"
+
+
+document.getElementById("upg_bldgThree_A").className = "upgrade"
+document.getElementById("upg_bldgThree_B").className = "upgrade"
+document.getElementById("upg_bldgThree_C").className = "upgrade"
+document.getElementById("upg_bldgThree_D").className = "upgrade"
+document.getElementById("upg_bldgThree_E").className = "upgrade"
+
+
+document.getElementById("upg_bldgFour_A").className = "upgrade"
+document.getElementById("upg_bldgFour_B").className = "upgrade"
+document.getElementById("upg_bldgFour_C").className = "upgrade"
+document.getElementById("upg_bldgFour_D").className = "upgrade"
+document.getElementById("upg_bldgFour_E").className = "upgrade"
+document.getElementById("upg_bldgFour_F").className = "upgrade"
+document.getElementById("upg_bldgFour_G").className = "upgrade"
+document.getElementById("upg_bldgFour_H").className = "upgrade"
+document.getElementById("upg_bldgFour_I").className = "upgrade"
+
+
+document.getElementById("upg_bldgFive_A").className = "upgrade"
+document.getElementById("upg_bldgFive_B").className = "upgrade"
+document.getElementById("upg_bldgFive_C").className = "upgrade"
+document.getElementById("upg_bldgFive_D").className = "upgrade"
+document.getElementById("upg_bldgFive_E").className = "upgrade"
+document.getElementById("upg_bldgFive_F").className = "upgrade"
+document.getElementById("upg_bldgFive_G").className = "upgrade"
+document.getElementById("upg_bldgFive_H").className = "upgrade"
+document.getElementById("upg_bldgFive_I").className = "upgrade"
+document.getElementById("upg_bldgFive_J").className = "upgrade"
+document.getElementById("upg_bldgFive_K").className = "upgrade"
+document.getElementById("upg_bldgFive_L").className = "upgrade"
+document.getElementById("upg_bldgFive_M").className = "upgrade"
+document.getElementById("upg_bldgFive_N").className = "upgrade"
+document.getElementById("upg_bldgFive_O").className = "upgrade"
+
+
+document.getElementById("upg_bldgSix_A").className = "upgrade"
+document.getElementById("upg_bldgSix_B").className = "upgrade"
+document.getElementById("upg_bldgSix_C").className = "upgrade"
+document.getElementById("upg_bldgSix_D").className = "upgrade"
+document.getElementById("upg_bldgSix_E").className = "upgrade"
+
+
+document.getElementById("upg_bldgSeven_A").className = "upgrade"
+document.getElementById("upg_bldgSeven_B").className = "upgrade"
+document.getElementById("upg_bldgSeven_C").className = "upgrade"
+document.getElementById("upg_bldgSeven_D").className = "upgrade"
+document.getElementById("upg_bldgSeven_E").className = "upgrade"
+document.getElementById("upg_bldgSeven_F").className = "upgrade"
+document.getElementById("upg_bldgSeven_G").className = "upgrade"
+document.getElementById("upg_bldgSeven_H").className = "upgrade"
+document.getElementById("upg_bldgSeven_I").className = "upgrade"
+
+
+document.getElementById("upg_bldgEight_A").className = "upgrade"
+document.getElementById("upg_bldgEight_B").className = "upgrade"
+document.getElementById("upg_bldgEight_C").className = "upgrade"
+document.getElementById("upg_bldgEight_D").className = "upgrade"
+document.getElementById("upg_bldgEight_E").className = "upgrade"
+document.getElementById("upg_bldgEight_F").className = "upgrade"
+document.getElementById("upg_bldgEight_G").className = "upgrade"
+document.getElementById("upg_bldgEight_H").className = "upgrade"
+document.getElementById("upg_bldgEight_I").className = "upgrade"
+document.getElementById("upg_bldgEight_J").className = "upgrade"
+document.getElementById("upg_bldgEight_K").className = "upgrade"
+document.getElementById("upg_bldgEight_L").className = "upgrade"
+document.getElementById("upg_bldgEight_M").className = "upgrade"
+document.getElementById("upg_bldgEight_N").className = "upgrade"
+document.getElementById("upg_bldgEight_O").className = "upgrade"
+
+
+document.getElementById("upg_bldgNine_A").className = "upgrade"
+document.getElementById("upg_bldgNine_B").className = "upgrade"
+document.getElementById("upg_bldgNine_C").className = "upgrade"
+document.getElementById("upg_bldgNine_D").className = "upgrade"
+document.getElementById("upg_bldgNine_E").className = "upgrade"
+
+
+document.getElementById("upg_bldgTen_A").className = "upgrade"
+document.getElementById("upg_bldgTen_B").className = "upgrade"
+document.getElementById("upg_bldgTen_C").className = "upgrade"
+document.getElementById("upg_bldgTen_D").className = "upgrade"
+document.getElementById("upg_bldgTen_E").className = "upgrade"
+document.getElementById("upg_bldgTen_F").className = "upgrade"
+document.getElementById("upg_bldgTen_G").className = "upgrade"
+document.getElementById("upg_bldgTen_H").className = "upgrade"
+document.getElementById("upg_bldgTen_I").className = "upgrade"
+
+
+document.getElementById("upg_bldgEleven_A").className = "upgrade"
+document.getElementById("upg_bldgEleven_B").className = "upgrade"
+document.getElementById("upg_bldgEleven_C").className = "upgrade"
+document.getElementById("upg_bldgEleven_D").className = "upgrade"
+document.getElementById("upg_bldgEleven_E").className = "upgrade"
+document.getElementById("upg_bldgEleven_F").className = "upgrade"
+document.getElementById("upg_bldgEleven_G").className = "upgrade"
+document.getElementById("upg_bldgEleven_H").className = "upgrade"
+document.getElementById("upg_bldgEleven_I").className = "upgrade"
+document.getElementById("upg_bldgEleven_J").className = "upgrade"
+document.getElementById("upg_bldgEleven_K").className = "upgrade"
+document.getElementById("upg_bldgEleven_L").className = "upgrade"
+document.getElementById("upg_bldgEleven_M").className = "upgrade"
+document.getElementById("upg_bldgEleven_N").className = "upgrade"
+document.getElementById("upg_bldgEleven_O").className = "upgrade"
+
+
+document.getElementById("upg_bldgTwelve_A").className = "upgrade"
+document.getElementById("upg_bldgTwelve_B").className = "upgrade"
+document.getElementById("upg_bldgTwelve_C").className = "upgrade"
+document.getElementById("upg_bldgTwelve_D").className = "upgrade"
+document.getElementById("upg_bldgTwelve_E").className = "upgrade"
+
+
+document.getElementById("upg_bldgThirteen_A").className = "upgrade"
+document.getElementById("upg_bldgThirteen_B").className = "upgrade"
+document.getElementById("upg_bldgThirteen_C").className = "upgrade"
+document.getElementById("upg_bldgThirteen_D").className = "upgrade"
+document.getElementById("upg_bldgThirteen_E").className = "upgrade"
+document.getElementById("upg_bldgThirteen_F").className = "upgrade"
+document.getElementById("upg_bldgThirteen_G").className = "upgrade"
+document.getElementById("upg_bldgThirteen_H").className = "upgrade"
+document.getElementById("upg_bldgThirteen_I").className = "upgrade"
+
+
+document.getElementById("upg_bldgFourteen_A").className = "upgrade"
+document.getElementById("upg_bldgFourteen_B").className = "upgrade"
+document.getElementById("upg_bldgFourteen_C").className = "upgrade"
+document.getElementById("upg_bldgFourteen_D").className = "upgrade"
+document.getElementById("upg_bldgFourteen_E").className = "upgrade"
+document.getElementById("upg_bldgFourteen_F").className = "upgrade"
+document.getElementById("upg_bldgFourteen_G").className = "upgrade"
+document.getElementById("upg_bldgFourteen_H").className = "upgrade"
+document.getElementById("upg_bldgFourteen_I").className = "upgrade"
+document.getElementById("upg_bldgFourteen_J").className = "upgrade"
+document.getElementById("upg_bldgFourteen_K").className = "upgrade"
+document.getElementById("upg_bldgFourteen_L").className = "upgrade"
+document.getElementById("upg_bldgFourteen_M").className = "upgrade"
+document.getElementById("upg_bldgFourteen_N").className = "upgrade"
+document.getElementById("upg_bldgFourteen_O").className = "upgrade"
+
+
+document.getElementById("upg_bldgFifteen_A").className = "upgrade"
+document.getElementById("upg_bldgFifteen_B").className = "upgrade"
+document.getElementById("upg_bldgFifteen_C").className = "upgrade"
+document.getElementById("upg_bldgFifteen_D").className = "upgrade"
+document.getElementById("upg_bldgFifteen_E").className = "upgrade"
+
+
+document.getElementById("upg_bldgSixteen_A").className = "upgrade"
+document.getElementById("upg_bldgSixteen_B").className = "upgrade"
+document.getElementById("upg_bldgSixteen_C").className = "upgrade"
+document.getElementById("upg_bldgSixteen_D").className = "upgrade"
+document.getElementById("upg_bldgSixteen_E").className = "upgrade"
+document.getElementById("upg_bldgSixteen_F").className = "upgrade"
+document.getElementById("upg_bldgSixteen_G").className = "upgrade"
+document.getElementById("upg_bldgSixteen_H").className = "upgrade"
+document.getElementById("upg_bldgSixteen_I").className = "upgrade"
+
+
+document.getElementById("upg_bldgSeventeen_A").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_B").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_C").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_D").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_E").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_F").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_G").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_H").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_I").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_J").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_K").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_L").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_M").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_N").className = "upgrade"
+document.getElementById("upg_bldgSeventeen_O").className = "upgrade"
+
+
+document.getElementById("upg_bldgEighteen_A").className = "upgrade"
+document.getElementById("upg_bldgEighteen_B").className = "upgrade"
+document.getElementById("upg_bldgEighteen_C").className = "upgrade"
+document.getElementById("upg_bldgEighteen_D").className = "upgrade"
+document.getElementById("upg_bldgEighteen_E").className = "upgrade"
+
+
+document.getElementById("upg_bldgNineteen_A").className = "upgrade"
+document.getElementById("upg_bldgNineteen_B").className = "upgrade"
+document.getElementById("upg_bldgNineteen_C").className = "upgrade"
+document.getElementById("upg_bldgNineteen_D").className = "upgrade"
+document.getElementById("upg_bldgNineteen_E").className = "upgrade"
+document.getElementById("upg_bldgNineteen_F").className = "upgrade"
+document.getElementById("upg_bldgNineteen_G").className = "upgrade"
+document.getElementById("upg_bldgNineteen_H").className = "upgrade"
+document.getElementById("upg_bldgNineteen_I").className = "upgrade"

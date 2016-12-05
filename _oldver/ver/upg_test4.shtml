@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+
+        <title>UPG test 4</title>
+
+    </head>
+
+    <style>
+
+        .disabled
+        {
+            display: none;
+            visibility: collapse;
+        }
+
+        .enabled
+        {
+            display: inline-block;
+            visibility: visible;
+        }
+
+    </style>
+
+    <script>
+
+        var perc = 0;
+        var base = 0;
+
+        function upgBuy(type, id)
+        {
+            if(type="perc"){
+                perc++
+            }else if(type="base"){
+                base++
+            }
+
+            document.getElementById(id).className = "enabled";
+        }
+
+    </script>
+
+    <body>
+
+        <button onclick="upgBuy('perc', 'upg_percOne')">Buy Perc 1</button>
+        <span id="upg_percOne" class="disabled"> | Percent Upg 1</span><br>
+        <br>
+        <button onclick="upgBuy('perc', 'upg_percTwo')">Buy Perc 2</button>
+        <span id="upg_percTwo" class="disabled"> | Percent Upg 2</span><br>
+        <br>
+        <button onclick="upgBuy('perc', 'upg_baseOne')">Buy Base 1</button>
+        <span id="upg_baseOne" class="disabled"> | Base Upgrade 1</span><br>
+        <br>
+        <button onclick="upgBuy('perc', 'upg_baseTwo')">Buy Base 2</button>
+        <span id="upg_baseTwo" class="disabled"> | Base Upgrade 2</span>
+
+    </body>
+
+</html>

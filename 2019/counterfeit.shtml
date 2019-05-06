@@ -1,0 +1,1460 @@
+<html>
+
+    <head>
+
+        <title>Counterfeit Clicker 2</title>
+        <link href="css.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+
+        <section style="background-image:url('../../assets/dirty_wood_bg.png'); width:30%;">
+
+            <div id="padding1" style="height:3%;"></div>
+
+            <article id="playerWallet">
+
+                <span id="textbox1" style="font-size:1.5em;">Your money</span><br>
+                <span id="playerCash" style="font-size:3em;"></span><br>
+                <br>
+                <span id="textbox2" style="font-size:1.5em;">Cash per Second</span><br>
+                <span id="cashPerSecond" style="font-size:3em;"></span>
+
+            </article>
+
+            <div id="padding2" style="height:3%;"></div>
+
+            <article>
+
+                <div id="padding3" style="height:20%; font-size:3em;"><br>Click the printer to begin!</div>
+
+                <div id="cashButtonArea" style="height:25%;">
+
+                    <img src="../../assets/printer_ph.png" class="cash-button" onclick="cashButton()" draggable="false">
+
+                </div>
+
+                <div id="padding4" style="height:20%;" onclick="devCheat()"></div>
+
+            </article>
+
+        </section>
+
+        <section style="width:40%; background-image:url('../../assets/brick_bg_repeat.png');">
+
+            <header style="height:auto; border-left: 2px solid #DDDDDD; border-right: 2px solid #DDDDDD;">
+
+                <button class="header-button" onclick="changeWindow('invWindow')">Inv</button>
+                <button class="header-button" onclick="changeWindow('shopWindow')">Shop</button>
+                <button class="header-button" onclick="changeWindow('statsWindow')">Stats</button>
+                <button class="header-button" onclick="changeWindow('optionsWindow')">Options</button>
+
+            </header>
+
+            <div id="invWindow" class="main-window" style="display: block; visibility:visible;">
+                
+                <header class="main-header">Inventory</header>
+
+                <article class="inv-table" id="bldgOneInvTable">
+
+                    <table>
+
+                        <tr><td class="inv-header">Counterfeit</td></tr>
+
+                        <tr class="inv-row" id="bldgOneAInvRow">
+
+                            <td class="tablecorner">Printer</td>
+                            <td class="tablemidcol"><span id=bldgOneAInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgOneACps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgOneBInvRow">
+
+                            <td class="tableleftcol">Artist</td>
+                            <td class="tablecenter"><span id=bldgOneBInv></span> owned</td>
+                            <td class="tablerightcol"><span id="bldgOneBCps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgOneCInvRow">
+
+                            <td class="tablecorner">Mint</td>
+                            <td class="tablemidcol"><span id=bldgOneCInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgOneCCps"></span> CPS</td>
+
+                        </tr>
+
+                    </table>
+
+                </article>
+
+                <article class="inv-table" id="bldgTwoInvTable">
+
+                    <table>
+
+                        <tr><td class="inv-header">Gambling</td></tr>
+
+                        <tr class="inv-row" id="bldgTwoAInvRow">
+
+                            <td class="tablecorner">Highroller</td>
+                            <td class="tablemidcol"><span id=bldgTwoAInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgTwoACps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgTwoBInvRow">
+
+                            <td class="tableleftcol">Con Artist</td>
+                            <td class="tablecenter"><span id=bldgTwoBInv></span> owned</td>
+                            <td class="tablerightcol"><span id="bldgTwoBCps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgTwoCInvRow">
+
+                            <td class="tablecorner">Casino</td>
+                            <td class="tablemidcol"><span id=bldgTwoCInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgTwoCCps"></span> CPS</td>
+
+                        </tr>
+
+                    </table>
+
+                </article>
+
+                <article class="inv-table" id="bldgThreeInvTable">
+
+                    <table>
+
+                        <tr><td class="inv-header">Digital</td></tr>
+
+                        <tr class="inv-row" id="bldgThreeAInvRow">
+
+                            <td class="tablecorner">Pirate</td>
+                            <td class="tablemidcol"><span id=bldgThreeAInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgThreeACps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgThreeBInvRow">
+
+                            <td class="tableleftcol">Hacker</td>
+                            <td class="tablecenter"><span id=bldgThreeBInv></span> owned</td>
+                            <td class="tablerightcol"><span id="bldgThreeBCps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgThreeCInvRow">
+
+                            <td class="tablecorner">Server Farm</td>
+                            <td class="tablemidcol"><span id=bldgThreeCInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgThreeCCps"></span> CPS</td>
+
+                        </tr>
+
+                    </table>
+
+                </article>
+
+                <article class="inv-table" id="bldgFourInvTable">
+
+                    <table>
+
+                        <tr><td class="inv-header">Drug Dealing</td></tr>
+
+                        <tr class="inv-row" id="bldgFourAInvRow">
+
+                            <td class="tablecorner">Dealer</td>
+                            <td class="tablemidcol"><span id=bldgFourAInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgFourACps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgFourBInvRow">
+
+                            <td class="tableleftcol">Smuggler</td>
+                            <td class="tablecenter"><span id=bldgFourBInv></span> owned</td>
+                            <td class="tablerightcol"><span id="bldgFourBCps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgFourCInvRow">
+
+                            <td class="tablecorner">Cartel</td>
+                            <td class="tablemidcol"><span id=bldgFourCInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgFourCCps"></span> CPS</td>
+
+                        </tr>
+
+                    </table>
+
+                </article>
+
+                <article class="inv-table" id="bldgFiveInvTable">
+
+                    <table>
+
+                        <tr><td class="inv-header">Stealing</td></tr>
+
+                        <tr class="inv-row" id="bldgFiveAInvRow">
+
+                            <td class="tablecorner">Robber</td>
+                            <td class="tablemidcol"><span id=bldgFiveAInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgFiveACps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgFiveBInvRow">
+
+                            <td class="tableleftcol">Thief</td>
+                            <td class="tablecenter"><span id=bldgFiveBInv></span> owned</td>
+                            <td class="tablerightcol"><span id="bldgFiveBCps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgFiveCInvRow">
+
+                            <td class="tablecorner">Safehouse</td>
+                            <td class="tablemidcol"><span id=bldgFiveCInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgFiveCCps"></span> CPS</td>
+
+                        </tr>
+
+                    </table>
+
+                </article>
+
+                <article class="inv-table" id="bldgSixInvTable">
+
+                    <table>
+
+                        <tr><td class="inv-header">Professionals</td></tr>
+
+                        <tr class="inv-row" id="bldgSixAInvRow">
+
+                            <td class="tablecorner">Executor</td>
+                            <td class="tablemidcol"><span id=bldgSixAInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgSixACps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgSixBInvRow">
+
+                            <td class="tableleftcol">Extortionist</td>
+                            <td class="tablecenter"><span id=bldgSixBInv></span> owned</td>
+                            <td class="tablerightcol"><span id="bldgSixBCps"></span> CPS</td>
+
+                        </tr>
+
+                        <tr class="inv-row" id="bldgSixCInvRow">
+
+                            <td class="tablecorner">Mafia</td>
+                            <td class="tablemidcol"><span id=bldgSixCInv></span> owned</td>
+                            <td class="tablecorner"><span id="bldgSixCCps"></span> CPS</td>
+
+                        </tr>
+
+                    </table>
+
+                </article>
+
+            </div>
+
+            <div id="shopWindow" class="main-window shop">
+                
+                <header class="main-header">Shop</header>
+
+                <article class="shop-article" id="shop">
+
+                    <input type="number" onfocus="blur()" id="solo" value="1" style="display:none; visibility:none;">
+
+                    <table class="shop-table" id="shopTableOne">
+                        
+                        <thead class="shop-head-wrap">
+                            
+                            <tr class="shop-header" id="shopHeader1">
+                            
+                            <th><div style="width:100%;">Counterfeit</div></th>
+                                
+                            </tr>
+                        
+                        </thead>
+                        
+                        <tbody class="shop-row open" id="shopRow1a">
+                            
+                            
+                            <tr>
+
+                                <td class="td-left">Printer</td>
+                                <td>$<span id="bldgOneABasePrice"></span></td>
+                                <td><span id="bldgOneABaseCps"></span> CPS</td>
+                                <td><span id="bldgOneAInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy1a" class="buy-button" onclick="buyBuilding(1,1,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt111"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy1aQty" class="buy-button" onclick="buyBuilding(1,1,'1aQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="1aQty">
+                                    <div class="tooltip">$<span id="tt112"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell1a" class="buy-button" onclick="sellBuilding(1,1,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt113"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell1aQty" class="buy-button" onclick="sellBuilding(1,1,'1aQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="1aQtySell">
+                                    <div class="tooltip">$<span id="tt114"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row open" id="shopRow1b">
+                            
+                            <tr>
+
+                                <td class="td-left">Artist</td>
+                                <td>$<span id="bldgOneBBasePrice"></span></td>
+                                <td><span id="bldgOneBBaseCps"></span> CPS</td>
+                                <td><span id="bldgOneBInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy1b" class="buy-button" onclick="buyBuilding(1,2,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt121"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy1bQty" class="buy-button" onclick="buyBuilding(1,2,'1bQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="1bQty">
+                                    <div class="tooltip">$<span id="tt122"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell1b" class="buy-button" onclick="sellBuilding(1,2,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt123"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell1bQty" class="buy-button" onclick="sellBuilding(1,2,'1bQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="1bQtySell">
+                                    <div class="tooltip">$<span id="tt124"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row open" id="shopRow1c">
+                            
+                            <tr>
+
+                                <td class="td-left">Mint</td>
+                                <td>$<span id="bldgOneCBasePrice"></span></td>
+                                <td><span id="bldgOneCBaseCps"></span> CPS</td>
+                                <td><span id="bldgOneCInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy1c" class="buy-button" onclick="buyBuilding(1,3,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt131"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy1cQty" class="buy-button" onclick="buyBuilding(1,3,'1cQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="1cQty">
+                                    <div class="tooltip">$<span id="tt132"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell1c" class="buy-button" onclick="sellBuilding(1,3,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt133"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell1cQty" class="buy-button" onclick="sellBuilding(1,3,'1cQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="1cQtySell">
+                                    <div class="tooltip">$<span id="tt134"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                    
+                    <table class="shop-table" id="shopTableTwo">
+                        
+                        <thead class="shop-head-wrap">
+                            
+                            <tr class="shop-header" id="shopHeader2">
+                            
+                            <th><div style="width:100%;">Gambling</div></th>
+                                
+                            </tr>
+                        
+                        </thead>
+                        
+                        <tbody class="shop-row" id="shopRow2a">
+                            
+                            <tr>
+
+                                <td class="td-left">Highroller</td>
+                                <td>$<span id="bldgTwoABasePrice"></span></td>
+                                <td><span id="bldgTwoABaseCps"></span> CPS</td>
+                                <td><span id="bldgTwoAInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy2a" class="buy-button" onclick="buyBuilding(2,1,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt211"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy2aQty" class="buy-button" onclick="buyBuilding(2,1,'2aQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="2aQty">
+                                    <div class="tooltip">$<span id="tt212"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell2a" class="buy-button" onclick="sellBuilding(2,1,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt213"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell2aQty" class="buy-button" onclick="sellBuilding(2,1,'2aQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="2aQtySell">
+                                    <div class="tooltip">$<span id="tt214"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow2b">
+                            
+                            <tr>
+
+                                <td class="td-left">Con Artist</td>
+                                <td>$<span id="bldgTwoBBasePrice"></span></td>
+                                <td><span id="bldgTwoBBaseCps"></span> CPS</td>
+                                <td><span id="bldgTwoBInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy2b" class="buy-button" onclick="buyBuilding(2,2,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt221"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy2bQty" class="buy-button" onclick="buyBuilding(2,2,'2bQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="2bQty">
+                                    <div class="tooltip">$<span id="tt222"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell2b" class="buy-button" onclick="sellBuilding(2,2,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt223"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell2bQty" class="buy-button" onclick="sellBuilding(2,2,'2bQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="2bQtySell">
+                                    <div class="tooltip">$<span id="tt224"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow2c">
+                            
+                            <tr>
+
+                                <td class="td-left">Casino</td>
+                                <td>$<span id="bldgTwoCBasePrice"></span></td>
+                                <td><span id="bldgTwoCBaseCps"></span> CPS</td>
+                                <td><span id="bldgTwoCInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy2c" class="buy-button" onclick="buyBuilding(2,3,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt231"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy2cQty" class="buy-button" onclick="buyBuilding(2,3,'2cQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="2cQty">
+                                    <div class="tooltip">$<span id="tt232"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell2c" class="buy-button" onclick="sellBuilding(2,3,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt233"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell2cQty" class="buy-button" onclick="sellBuilding(2,3,'2cQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="2cQtySell">
+                                    <div class="tooltip">$<span id="tt234"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                    
+                    <table class="shop-table" id="shopTableThree">
+                        
+                        <thead class="shop-head-wrap">
+                            
+                            <tr class="shop-header" id="shopHeader3">
+                            
+                            <th><div style="width:100%;">Digital</div></th>
+                                
+                            </tr>
+                        
+                        </thead>
+                        
+                        <tbody class="shop-row" id="shopRow3a">
+                            
+                            <tr>
+
+                                <td class="td-left">Pirate</td>
+                                <td>$<span id="bldgThreeABasePrice"></span></td>
+                                <td><span id="bldgThreeABaseCps"></span> CPS</td>
+                                <td><span id="bldgThreeAInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy3a" class="buy-button" onclick="buyBuilding(3,1,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt3a1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy3aQty" class="buy-button" onclick="buyBuilding(3,1,'3aQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="3aQty">
+                                    <div class="tooltip">$<span id="tt3a2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell3a" class="buy-button" onclick="sellBuilding(3,1,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt3a3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell3aQty" class="buy-button" onclick="sellBuilding(3,1,'3aQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="3aQtySell">
+                                    <div class="tooltip">$<span id="tt3a4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow3b">
+                            
+                            <tr>
+
+                                <td class="td-left">Hacker</td>
+                                <td>$<span id="bldgThreeBBasePrice"></span></td>
+                                <td><span id="bldgThreeBBaseCps"></span> CPS</td>
+                                <td><span id="bldgThreeBInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy3b" class="buy-button" onclick="buyBuilding(3,2,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt3b1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy3bQty" class="buy-button" onclick="buyBuilding(3,2,'3bQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="3bQty">
+                                    <div class="tooltip">$<span id="tt3b2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell3b" class="buy-button" onclick="sellBuilding(3,2,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt3b3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell3bQty" class="buy-button" onclick="sellBuilding(3,2,'3bQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="3bQtySell">
+                                    <div class="tooltip">$<span id="tt3b4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow3c">
+                            
+                            <tr>
+
+                                <td class="td-left">Cyber Cafe</td>
+                                <td>$<span id="bldgThreeCBasePrice"></span></td>
+                                <td><span id="bldgThreeCBaseCps"></span> CPS</td>
+                                <td><span id="bldgThreeCInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy3c" class="buy-button" onclick="buyBuilding(3,3,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt3c1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy3cQty" class="buy-button" onclick="buyBuilding(3,3,'3cQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="3cQty">
+                                    <div class="tooltip">$<span id="tt3c2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell3c" class="buy-button" onclick="sellBuilding(3,3,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt3c3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell3cQty" class="buy-button" onclick="sellBuilding(3,3,'3cQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="3cQtySell">
+                                    <div class="tooltip">$<span id="tt3c4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                    
+                    <table class="shop-table" id="shopTableFour">
+                        
+                        <thead class="shop-head-wrap">
+                            
+                            <tr class="shop-header" id="shopHeader4">
+                            
+                            <th><div style="width:100%;">Drug Dealing</div></th>
+                                
+                            </tr>
+                        
+                        </thead>
+                        
+                        <tbody class="shop-row" id="shopRow4a">
+                            
+                            <tr>
+
+                                <td class="td-left">Dealer</td>
+                                <td>$<span id="bldgFourABasePrice"></span></td>
+                                <td><span id="bldgFourABaseCps"></span> CPS</td>
+                                <td><span id="bldgFourAInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy4a" class="buy-button" onclick="buyBuilding(4,1,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt4a1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy4aQty" class="buy-button" onclick="buyBuilding(4,1,'4aQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="4aQty">
+                                    <div class="tooltip">$<span id="tt4a2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell4a" class="buy-button" onclick="sellBuilding(4,1,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt4a3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell4aQty" class="buy-button" onclick="sellBuilding(4,1,'4aQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="4aQtySell">
+                                    <div class="tooltip">$<span id="tt4a4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow4b">
+                            
+                            <tr>
+
+                                <td class="td-left">Smuggler</td>
+                                <td>$<span id="bldgFourBBasePrice"></span></td>
+                                <td><span id="bldgFourBBaseCps"></span> CPS</td>
+                                <td><span id="bldgFourBInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy4b" class="buy-button" onclick="buyBuilding(4,2,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt4b1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy4bQty" class="buy-button" onclick="buyBuilding(4,2,'4bQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="4bQty">
+                                    <div class="tooltip">$<span id="tt4b2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell4b" class="buy-button" onclick="sellBuilding(4,2,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt4b3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell4bQty" class="buy-button" onclick="sellBuilding(4,2,'4bQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="4bQtySell">
+                                    <div class="tooltip">$<span id="tt4b4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow4c">
+                            
+                            <tr>
+
+                                <td class="td-left">Cartel</td>
+                                <td>$<span id="bldgFourCBasePrice"></span></td>
+                                <td><span id="bldgFourCBaseCps"></span> CPS</td>
+                                <td><span id="bldgFourCInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy4c" class="buy-button" onclick="buyBuilding(4,3,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt4c1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy4cQty" class="buy-button" onclick="buyBuilding(4,3,'4cQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="4cQty">
+                                    <div class="tooltip">$<span id="tt4c2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell4c" class="buy-button" onclick="sellBuilding(4,3,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt4c3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell4cQty" class="buy-button" onclick="sellBuilding(4,3,'4cQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="4cQtySell">
+                                    <div class="tooltip">$<span id="tt4c4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                    
+                    <table class="shop-table" id="shopTableFive">
+                        
+                        <thead class="shop-head-wrap">
+                            
+                            <tr class="shop-header" id="shopHeader5">
+                            
+                            <th><div style="width:100%;">Stealing</div></th>
+                                
+                            </tr>
+                        
+                        </thead>
+                        
+                        <tbody class="shop-row" id="shopRow5a">
+                            
+                            <tr>
+
+                                <td class="td-left">Robber</td>
+                                <td>$<span id="bldgFiveABasePrice"></span></td>
+                                <td><span id="bldgFiveABaseCps"></span> CPS</td>
+                                <td><span id="bldgFiveAInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy5a" class="buy-button" onclick="buyBuilding(5,1,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt5a1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy5aQty" class="buy-button" onclick="buyBuilding(5,1,'5aQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="5aQty">
+                                    <div class="tooltip">$<span id="tt5a2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell5a" class="buy-button" onclick="sellBuilding(5,1,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt5a3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell5aQty" class="buy-button" onclick="sellBuilding(5,1,'5aQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="5aQtySell">
+                                    <div class="tooltip">$<span id="tt5a4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow5b">
+                            
+                            <tr>
+
+                                <td class="td-left">Thief</td>
+                                <td>$<span id="bldgFiveBBasePrice"></span></td>
+                                <td><span id="bldgFiveBBaseCps"></span> CPS</td>
+                                <td><span id="bldgFiveBInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy5b" class="buy-button" onclick="buyBuilding(5,2,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt5b1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy5bQty" class="buy-button" onclick="buyBuilding(5,2,'5bQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="5bQty">
+                                    <div class="tooltip">$<span id="tt5b2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell5b" class="buy-button" onclick="sellBuilding(5,2,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt5b3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell5bQty" class="buy-button" onclick="sellBuilding(5,2,'5bQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="5bQtySell">
+                                    <div class="tooltip">$<span id="tt5b4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow5c">
+                            
+                            <tr>
+
+                                <td class="td-left">Safehouse</td>
+                                <td>$<span id="bldgFiveCBasePrice"></span></td>
+                                <td><span id="bldgFiveCBaseCps"></span> CPS</td>
+                                <td><span id="bldgFiveCInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy5c" class="buy-button" onclick="buyBuilding(5,3,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt5c1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy5cQty" class="buy-button" onclick="buyBuilding(5,3,'5cQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="5cQty">
+                                    <div class="tooltip">$<span id="tt5c2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell5c" class="buy-button" onclick="sellBuilding(5,3,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt5c3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell5cQty" class="buy-button" onclick="sellBuilding(5,3,'5cQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="5cQtySell">
+                                    <div class="tooltip">$<span id="tt5c4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                    
+                    <table class="shop-table" id="shopTableSix">
+                        
+                        <thead class="shop-head-wrap">
+                            
+                            <tr class="shop-header" id="shopHeader6">
+                            
+                            <th><div style="width:100%;">Professionals</div></th>
+                                
+                            </tr>
+                        
+                        </thead>
+                        
+                        <tbody class="shop-row" id="shopRow6a">
+                            
+                            <tr>
+
+                                <td class="td-left">Executor</td>
+                                <td>$<span id="bldgSixABasePrice"></span></td>
+                                <td><span id="bldgSixABaseCps"></span> CPS</td>
+                                <td><span id="bldgSixAInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy6a" class="buy-button" onclick="buyBuilding(6,1,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt6a1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy6aQty" class="buy-button" onclick="buyBuilding(6,1,'6aQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="6aQty">
+                                    <div class="tooltip">$<span id="tt6a2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell6a" class="buy-button" onclick="sellBuilding(6,1,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt6a3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell6aQty" class="buy-button" onclick="sellBuilding(6,1,'6aQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="6aQtySell">
+                                    <div class="tooltip">$<span id="tt6a4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow6b">
+                            
+                            <tr>
+
+                                <td class="td-left">Extortionist</td>
+                                <td>$<span id="bldgSixBBasePrice"></span></td>
+                                <td><span id="bldgSixBBaseCps"></span> CPS</td>
+                                <td><span id="bldgSixBInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy6b" class="buy-button" onclick="buyBuilding(6,2,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt6b1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy6bQty" class="buy-button" onclick="buyBuilding(6,2,'6bQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="6bQty">
+                                    <div class="tooltip">$<span id="tt6b2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell6b" class="buy-button" onclick="sellBuilding(6,2,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt6b3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell6bQty" class="buy-button" onclick="sellBuilding(6,2,'6bQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="6bQtySell">
+                                    <div class="tooltip">$<span id="tt6b4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+                        
+                        <tbody class="shop-row" id="shopRow6c">
+                            
+                            <tr>
+
+                                <td class="td-left">Mafia</td>
+                                <td>$<span id="bldgSixCBasePrice"></span></td>
+                                <td><span id="bldgSixCBaseCps"></span> CPS</td>
+                                <td><span id="bldgSixCInvBuy"></span> owned</td>
+
+                            </tr>
+                                
+                            <tr class="buy-menu">
+
+                                <td class="button-cell">
+                                    <button id="buy6c" class="buy-button" onclick="buyBuilding(6,3,'solo')">Buy 1</button>
+                                    <div class="tooltip">$<span id="tt6c1"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="buy6cQty" class="buy-button" onclick="buyBuilding(6,3,'6cQty')">Buy</button>
+                                    <input type="number" onfocus="blur()" onfocus="blur()" value="1" min="1" class="buy-quantity" id="6cQty">
+                                    <div class="tooltip">$<span id="tt6c2"></span></div>
+                                </td>
+                                
+                                <td class="button-cell">
+                                    
+                                    <button id="sell6c" class="buy-button" onclick="sellBuilding(6,3,'solo')">Sell 1</button>
+                                    <div class="tooltip">$<span id="tt6c3"></span></div>
+                                    
+                                </td>
+                                
+                                <td class="button-cell">
+                                    <button id="sell6cQty" class="buy-button" onclick="sellBuilding(6,3,'6cQtySell')">Sell</button>
+                                    <input type="number" onfocus="blur()" value="1" min="1" class="buy-quantity" id="6cQtySell">
+                                    <div class="tooltip">$<span id="tt6c4"></span></div>
+                                </td>
+
+                            </tr>
+                            
+                        </tbody>
+
+                    </table>
+
+                </article>
+
+            </div>
+
+            <div id="statsWindow" class="main-window stats-window">
+                
+                <header class="main-header">Stats</header>
+
+                <div class="stats-wrapper" style="display:none; visibility:hidden;">
+
+                    <article class="stats-article">
+
+                        <table class="stats-table">
+
+                            <tr>
+                                <td class="name">Counterfeit</td>
+                                <td>Printer</td>
+                                <td>Artist</td>
+                                <td>Mint</td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS/1</td>
+                                <td id="1-1-A"></td>
+                                <td id="1-2-A"></td>
+                                <td id="1-3-A"></td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS TOTAL</td>
+                                <td id="2-1-A"></td>
+                                <td id="2-2-A"></td>
+                                <td id="2-3-A"></td>
+                            </tr>
+
+                            <tr>
+                                <td>ALL-TIME</td>
+                                <td id="3-1-A"></td>
+                                <td id="3-2-A"></td>
+                                <td id="3-3-A"></td>
+                            </tr>
+
+                            <tr>
+                                <td>TOTAL PRICE</td>
+                                <td id="4-1-A"></td>
+                                <td id="4-2-A"></td>
+                                <td id="4-3-A"></td>
+                            </tr>
+
+                        </table>
+                        
+                        <table class="stats-table">
+
+                            <tr>
+                                <td class="name">Gambling</td>
+                                <td>Highroller</td>
+                                <td>Con Artist</td>
+                                <td>Casino</td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS/1</td>
+                                <td id="1-1-B"></td>
+                                <td id="1-2-B"></td>
+                                <td id="1-3-B"></td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS TOTAL</td>
+                                <td id="2-1-B"></td>
+                                <td id="2-2-B"></td>
+                                <td id="2-3-B"></td>
+                            </tr>
+
+                            <tr>
+                                <td>ALL-TIME</td>
+                                <td id="3-1-B"></td>
+                                <td id="3-2-B"></td>
+                                <td id="3-3-B"></td>
+                            </tr>
+
+                            <tr>
+                                <td>TOTAL PRICE</td>
+                                <td id="4-1-B"></td>
+                                <td id="4-2-B"></td>
+                                <td id="4-3-B"></td>
+                            </tr>
+
+                        </table>
+                        
+                        <table class="stats-table">
+
+                            <tr>
+                                <td class="name">Digital</td>
+                                <td>Pirate</td>
+                                <td>Hacker</td>
+                                <td>Server Farm</td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS/1</td>
+                                <td id="1-1-C"></td>
+                                <td id="1-2-C"></td>
+                                <td id="1-3-C"></td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS TOTAL</td>
+                                <td id="2-1-C"></td>
+                                <td id="2-2-C"></td>
+                                <td id="2-3-C"></td>
+                            </tr>
+
+                            <tr>
+                                <td>ALL-TIME</td>
+                                <td id="3-1-C"></td>
+                                <td id="3-2-C"></td>
+                                <td id="3-3-C"></td>
+                            </tr>
+
+                            <tr>
+                                <td>TOTAL PRICE</td>
+                                <td id="4-1-C"></td>
+                                <td id="4-2-C"></td>
+                                <td id="4-3-C"></td>
+                            </tr>
+
+                        </table>
+                        
+                        <table class="stats-table">
+
+                            <tr>
+                                <td class="name">Drug Dealing</td>
+                                <td>Dealer</td>
+                                <td>Smuggler</td>
+                                <td>Cartel</td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS/1</td>
+                                <td id="1-1-D"></td>
+                                <td id="1-2-D"></td>
+                                <td id="1-3-D"></td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS TOTAL</td>
+                                <td id="2-1-D"></td>
+                                <td id="2-2-D"></td>
+                                <td id="2-3-D"></td>
+                            </tr>
+
+                            <tr>
+                                <td>ALL-TIME</td>
+                                <td id="3-1-D"></td>
+                                <td id="3-2-D"></td>
+                                <td id="3-3-D"></td>
+                            </tr>
+
+                            <tr>
+                                <td>TOTAL PRICE</td>
+                                <td id="4-1-D"></td>
+                                <td id="4-2-D"></td>
+                                <td id="4-3-D"></td>
+                            </tr>
+
+                        </table>
+                        
+                        <table class="stats-table">
+
+                            <tr>
+                                <td class="name">Stealing</td>
+                                <td>Robber</td>
+                                <td>Thief</td>
+                                <td>Safehouse</td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS/1</td>
+                                <td id="1-1-E"></td>
+                                <td id="1-2-E"></td>
+                                <td id="1-3-E"></td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS TOTAL</td>
+                                <td id="2-1-E"></td>
+                                <td id="2-2-E"></td>
+                                <td id="2-3-E"></td>
+                            </tr>
+
+                            <tr>
+                                <td>ALL-TIME</td>
+                                <td id="3-1-E"></td>
+                                <td id="3-2-E"></td>
+                                <td id="3-3-E"></td>
+                            </tr>
+
+                            <tr>
+                                <td>TOTAL PRICE</td>
+                                <td id="4-1-E"></td>
+                                <td id="4-2-E"></td>
+                                <td id="4-3-E"></td>
+                            </tr>
+
+                        </table>
+                        
+                        <table class="stats-table">
+
+                            <tr>
+                                <td class="name">Pros</td>
+                                <td>Executor</td>
+                                <td>Extortionist</td>
+                                <td>Mafia</td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS/1</td>
+                                <td id="1-1-F"></td>
+                                <td id="1-2-F"></td>
+                                <td id="1-3-F"></td>
+                            </tr>
+
+                            <tr>
+                                <td>CPS TOTAL</td>
+                                <td id="2-1-F"></td>
+                                <td id="2-2-F"></td>
+                                <td id="2-3-F"></td>
+                            </tr>
+
+                            <tr>
+                                <td>ALL-TIME</td>
+                                <td id="3-1-F"></td>
+                                <td id="3-2-F"></td>
+                                <td id="3-3-F"></td>
+                            </tr>
+
+                            <tr>
+                                <td>TOTAL PRICE</td>
+                                <td id="4-1-F"></td>
+                                <td id="4-2-F"></td>
+                                <td id="4-3-F"></td>
+                            </tr>
+
+                        </table>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+            <div id="optionsWindow" class="main-window">
+                
+                <header class="main-header">Options</header>
+                
+                <!-- Options here -->
+                
+            </div>
+
+        </section>
+
+        <section style="overflow-x:scroll; width:30%;">
+
+            <header style="font-size:2.5em; border-bottom: 3px solid #4A4A4A;">Upgrades</header>
+
+            <article id="overallUpgArticle" class="upgrade-article">
+
+                <header class="upgrade-header">Overall</header>
+
+                <div class="upgrade-box">
+
+                    <!-- Overall Upgrades -->
+
+                </div>
+
+            </article>
+
+            <article id="bldgOneUpgArticle" class="upgrade-article">
+
+                <header class="upgrade-header">Counterfeit</header>
+
+                <div class="upgrade-box">
+
+                    <!-- Counterfeit Upgrades -->
+                    
+                    <span id="upgOneA1" class="upgrade" onclick="buyUpg(bldgOneAUpgs[0])">C1</span>
+                    <span id="upgOneA2" class="upgrade" onclick="buyUpg(bldgOneAUpgs[1])">C2</span>
+                    <span id="upgOneA3" class="upgrade" onclick="buyUpg(bldgOneAUpgs[2])">C3</span>
+                    <span id="upgOneA4" class="upgrade" onclick="buyUpg(bldgOneAUpgs[3])">C4</span>
+                    <span id="upgOneA5" class="upgrade" onclick="buyUpg(bldgOneAUpgs[4])">C5</span>
+
+                </div>
+
+            </article>
+
+            <article id="bldgTwpUpgArticle" class="upgrade-article">
+
+                <header class="upgrade-header">Gambling</header>
+
+                <div class="upgrade-box">
+
+                    <!-- Gambling Upgrades -->
+
+                </div>
+
+            </article>
+
+            <article id="bldgThreeUpgArticle" class="upgrade-article">
+
+                <header class="upgrade-header">Digital</header>
+
+                <div class="upgrade-box">
+
+                    <!-- Digital Upgrades -->
+
+                </div>
+
+            </article>
+
+            <article id="bldgFourUpgArticle" class="upgrade-article">
+
+                <header class="upgrade-header">Drug Dealing</header>
+
+                <div class="upgrade-box">
+
+                    <!-- Drug Upgrades -->
+
+                </div>
+
+            </article>
+
+            <article id="bldgFiveUpgArticle" class="upgrade-article">
+
+                <header class="upgrade-header">Stealing</header>
+
+                <div class="upgrade-box">
+
+                    <!-- Stealing Upgrades -->
+
+                </div>
+
+            </article>
+
+            <article id="bldgSixUpgArticle" class="upgrade-article">
+
+                <header class="upgrade-header">Professionals</header>
+
+                <div class="upgrade-box">
+
+                    <!-- Pros Upgrades -->
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </body>
+
+    <script src="base64.js"></script>
+    <script src=js.js></script>
+    <script src="setinterval.js"></script>
+
+</html>
